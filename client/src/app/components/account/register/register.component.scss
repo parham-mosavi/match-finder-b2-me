@@ -1,0 +1,56 @@
+.navbar-heder {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .heder {
+        background-color: rgb(169, 207, 234);
+        padding: 5px;
+        // margin: 40px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        // max-width: 200px;
+        border: solid 4px rgb(0, 20, 68);
+        border-radius: 15px;
+    }
+}
+
+
+div {
+    // background: palegoldenrod;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    form {
+        // background: gray;
+        // background-color: aquamarine;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        padding: 1rem;
+        margin: 1rem;
+        border: solid 4px black;
+        border-radius: 8px;
+    }
+
+    //     .item-1 {
+    //         // background: gray;
+    //         display: flex;
+    //         flex-direction: column;
+    //     }
+
+    .item-2 {
+        // background: yellowgreen;
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+    }
+}
