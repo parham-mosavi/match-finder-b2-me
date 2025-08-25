@@ -7,3 +7,4 @@ global using MongoDB.Bson.Serialization.Attributes;
 global using api.Interfaces;
 global using api.Models;
 global using api.DTOs;
+global using api.Repositoris;

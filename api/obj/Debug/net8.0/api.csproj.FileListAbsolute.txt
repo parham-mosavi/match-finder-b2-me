@@ -38,3 +38,4 @@
 /home/parham/Desktop/match-finder-b2-me/api/obj/Debug/net8.0/api.pdb
 /home/parham/Desktop/match-finder-b2-me/api/obj/Debug/net8.0/api.genruntimeconfig.cache
 /home/parham/Desktop/match-finder-b2-me/api/obj/Debug/net8.0/ref/api.dll
+/home/parham/Desktop/match-finder-b2-me/api/obj/Debug/net8.0/api.sourcelink.json
