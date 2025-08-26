@@ -33,7 +33,7 @@ export class RegisterComponent {
   registerFg = this.fB.group({
     emailCtrl: ['', [Validators.required, Validators.email]], // formControl
     userNameCtrl: ['', [Validators.required]],
-    ageCtrl: [0, [Validators.required, Validators.min(18), Validators.max(70)]],
+    ageCtrl: [, [Validators.required, Validators.min(18), Validators.max(70)]],
     passwordCtrl: ['', [Validators.minLength(4), Validators.maxLength(8)]],
     confirmPasswordCtrl: ['', [Validators.required]],
     genderCtrl: '',

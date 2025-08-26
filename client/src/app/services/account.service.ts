@@ -17,31 +17,31 @@ export class AccountService {
   http = inject(HttpClient);
 
   register(userInput: AppUser): Observable<LoggedIn> {
-    let response$: Observable<LoggedIn> = this.http.post<LoggedIn>('http://localhost:5283/api/account/register', userInput);
+    let response$: Observable<LoggedIn> = this.http.post<LoggedIn>('http://localhost:5000/api/account/register', userInput);
 
     return response$;
   }
 
   login(userInput: Login): Observable<LoggedIn> {
-    let response$: Observable<LoggedIn> = this.http.post<LoggedIn>('http://localhost:5283/api/account/login', userInput);
+    let response$: Observable<LoggedIn> = this.http.post<LoggedIn>('http://localhost:5000/api/account/login', userInput);
 
     return response$;
   }
 
   getAll(): Observable<Member[]> {
-    let response$: Observable<Member[]> = this.http.get<Member[]>('http://localhost:5283/api/member/getall');
+    let response$: Observable<Member[]> = this.http.get<Member[]>('http://localhost:5000/api/member/getall');
 
     return response$;
   }
 
   getByUserName(userName: string): Observable<Member> {
-    let response$: Observable<Member> = this.http.get<Member>('http://localhost:5283/api/member/get-by-username/' + userName);
+    let response$: Observable<Member> = this.http.get<Member>('http://localhost:5000/api/member/get-by-username/' + userName);
 
     return response$;
   }
 
   updateById(userId: string, userInput: AppUser): Observable<Member> {
-    let response$: Observable<Member> = this.http.put<Member>('http://localhost:5283/api/user/updatebyid/' + userId, userInput);
+    let response$: Observable<Member> = this.http.put<Member>('http://localhost:5000/api/user/updatebyid/' + userId, userInput);
 
     return response$;
   }
