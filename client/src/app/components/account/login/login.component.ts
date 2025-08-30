@@ -8,13 +8,12 @@ import { MatInputModule } from "@angular/material/input";
 import { MatBadgeModule } from '@angular/material/badge';
 import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule } from '@angular/material/form-field';
 
 @Component({
   selector: 'app-login',
   imports: [RouterModule,
     FormsModule, ReactiveFormsModule,
-    MatFormFieldModule, MatInputModule, MatButtonModule],
+    MatInputModule, MatButtonModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
