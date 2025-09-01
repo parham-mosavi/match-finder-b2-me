@@ -5,6 +5,11 @@ div {
     justify-content: center;
     align-items: center;
 
+    .heder {
+        font-size: xx-large;
+        margin: 1rem;
+    }
+
     form {
         // background: gray;
         // background-color: aquamarine;
@@ -19,16 +24,8 @@ div {
         border-radius: 8px;
     }
 
-    //     .item-1 {
-    //         // background: gray;
-    //         display: flex;
-    //         flex-direction: column;
-    //     }
-
-    .item-2 {
-        // background: yellowgreen;
-        display: flex;
-        flex-direction: row;
-        gap: 0.5rem;
+    .router-login {
+        text-decoration-line: none;
+        margin: 1rem;
     }
 }
