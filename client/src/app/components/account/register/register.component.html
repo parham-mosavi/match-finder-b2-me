@@ -41,7 +41,7 @@
             <input type="text" [formControl]="CountryCtrl" matInput>
         </mat-form-field>
 
-        <button (click)="register()" mat-raised-button [disabled]="registerFg.invalid">Register</button>
+        <button routerLink='/members/member-list' (click)="register()" mat-raised-button [disabled]="registerFg.invalid">Register</button>
         <a class="router-login" routerLink="/account/login" href="">I have Account</a>
     </form>
 
