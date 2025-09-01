@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { AccountService } from '../../../services/account.service';
 import { Member } from '../../../models/member.model';
 import { Observable } from 'rxjs';
@@ -12,10 +12,13 @@ import { MatIconModule } from '@angular/material/icon';
   templateUrl: './member-list.component.html',
   styleUrl: './member-list.component.scss'
 })
-export class MemberListComponent {
+export class MemberListComponent implements OnInit{
   accountservics = inject(AccountService)
   member: Member[] | undefined;
-
+  
+  ngOnInit(): void {
+    this.getAll();
+  }
 
   getAll(): void {
     let allMembers: Observable<Member[]> = this.accountservics.getAll();
