@@ -14,7 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class MemberListComponent implements OnInit{
   accountservics = inject(AccountService)
-  member: Member[] | undefined;
+  members: Member[] | undefined;
   
   ngOnInit(): void {
     this.getAll();
@@ -26,7 +26,7 @@ export class MemberListComponent implements OnInit{
     allMembers.subscribe({
       next: (res) => {
         console.log(res)
-        this.member = res
+        this.members = res
       }
     });
   }
