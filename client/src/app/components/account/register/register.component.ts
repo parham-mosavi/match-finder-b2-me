@@ -26,7 +26,7 @@ export class RegisterComponent {
   accountService = inject(AccountService);
   fB = inject(FormBuilder);
 
-  userResponse: LoggedIn | undefined;
+  userResponse: LoggedIn | undefined | null;
   error: string | undefined;
 
   //#region 
@@ -86,7 +86,7 @@ export class RegisterComponent {
       country: this.CountryCtrl.value
     }
 
-    let response$: Observable<LoggedIn> = this.accountService.register(userInput);
+    let response$: Observable<LoggedIn | null> = this.accountService.register(userInput);
 
     response$.subscribe({
       next: (res) => {
@@ -100,3 +100,16 @@ export class RegisterComponent {
     });
   }
 }
+
+//     response$.subscribe({
+//       next: (res) => {
+//         console.log(res);
+//         this.userResponse = res;
+//       },
+//       error: (err) => {
+//         console.log(err.error);
+//         this.error = err.error;
+//       }
+//     });
+//   }
+// }

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable, pipe } from 'rxjs';
 import { Member } from '../models/member.model.js';
 import { AppUser } from '../models/app-user.model.js';
 import { LoggedIn } from '../models/logged-in-model.js';
@@ -16,14 +16,32 @@ import { Login } from '../models/login.model.js';
 export class AccountService {
   http = inject(HttpClient);
 
-  register(userInput: AppUser): Observable<LoggedIn> {
-    let response$: Observable<LoggedIn> = this.http.post<LoggedIn>('http://localhost:5000/api/account/register', userInput);
+  private readonly _baseApiUrl: string = 'http://localhost:5000/api/'
+
+  register(userInput: AppUser): Observable<LoggedIn | null> {
+    let response$: Observable<LoggedIn | null> =
+      this.http.post<LoggedIn>(this._baseApiUrl + 'account/register', userInput)
+        .pipe(map(res => {
+          if (res) {
+            this.setCurrentUser(res);
+          }
+
+          return null;
+        }))
 
     return response$;
   }
 
-  login(userInput: Login): Observable<LoggedIn> {
-    let response$: Observable<LoggedIn> = this.http.post<LoggedIn>('http://localhost:5000/api/account/login', userInput);
+  login(userInput: Login): Observable<LoggedIn | null> {
+    let response$: Observable<LoggedIn | null> =
+      this.http.post<LoggedIn>(this._baseApiUrl + 'account/login', userInput)
+      .pipe(map(res => {
+        if (res) {
+          this.setCurrentUser(res);
+        }
+
+        return null;
+      }))
 
     return response$;
   }
@@ -44,5 +62,9 @@ export class AccountService {
     let response$: Observable<Member> = this.http.put<Member>('http://localhost:5000/api/user/updatebyid/' + userId, userInput);
 
     return response$;
+  }
+
+  setCurrentUser(userInput: LoggedIn): void {
+    localStorage.setItem('loggedIn', JSON.stringify(userInput));
   }
 }
