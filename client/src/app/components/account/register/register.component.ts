@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AccountService } from '../../../services/account.service';
-import { LoggedIn } from '../../../models/logged-in-model';
+import { LoggedInUser } from '../../../models/logged-in-model';
 import { AppUser } from '../../../models/app-user.model';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -26,7 +26,7 @@ export class RegisterComponent {
   accountService = inject(AccountService);
   fB = inject(FormBuilder);
 
-  userResponse: LoggedIn | undefined | null;
+  userResponse: LoggedInUser | undefined | null;
   error: string | undefined;
 
   //#region 
@@ -86,7 +86,7 @@ export class RegisterComponent {
       country: this.CountryCtrl.value
     }
 
-    let response$: Observable<LoggedIn | null> = this.accountService.register(userInput);
+    let response$: Observable<LoggedInUser | null> = this.accountService.register(userInput);
 
     response$.subscribe({
       next: (res) => {

@@ -1,26 +1,25 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
+import { inject, Injectable, signal } from '@angular/core';
 import { map, Observable, pipe } from 'rxjs';
 import { Member } from '../models/member.model.js';
 import { AppUser } from '../models/app-user.model.js';
-import { LoggedIn } from '../models/logged-in-model.js';
+import { LoggedInUser } from '../models/logged-in-model.js';
 import { Login } from '../models/login.model.js';
-// import { LoggedIn } from '../models/logged-in.model';
-// import { Login } from '../models/login.model';
-// import { Member } from '../models/member.model';
-// import { AppUser } from '../models/app-user.model.ts';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AccountService {
   http = inject(HttpClient);
+  router = inject(Router);
+  loggedInUserSig = signal<LoggedInUser | null>(null);
 
   private readonly _baseApiUrl: string = 'http://localhost:5000/api/'
 
-  register(userInput: AppUser): Observable<LoggedIn | null> {
-    let response$: Observable<LoggedIn | null> =
-      this.http.post<LoggedIn>(this._baseApiUrl + 'account/register', userInput)
+  register(userInput: AppUser): Observable<LoggedInUser | null> {
+    let response$: Observable<LoggedInUser | null> =
+      this.http.post<LoggedInUser>(this._baseApiUrl + 'account/register', userInput)
         .pipe(map(res => {
           if (res) {
             this.setCurrentUser(res);
@@ -32,16 +31,16 @@ export class AccountService {
     return response$;
   }
 
-  login(userInput: Login): Observable<LoggedIn | null> {
-    let response$: Observable<LoggedIn | null> =
-      this.http.post<LoggedIn>(this._baseApiUrl + 'account/login', userInput)
-      .pipe(map(res => {
-        if (res) {
-          this.setCurrentUser(res);
-        }
+  login(userInput: Login): Observable<LoggedInUser | null> {
+    let response$: Observable<LoggedInUser | null> =
+      this.http.post<LoggedInUser>(this._baseApiUrl + 'account/login', userInput)
+        .pipe(map(res => {
+          if (res) {
+            this.setCurrentUser(res);
+          }
 
-        return null;
-      }))
+          return null;
+        }))
 
     return response$;
   }
@@ -64,7 +63,15 @@ export class AccountService {
     return response$;
   }
 
-  setCurrentUser(userInput: LoggedIn): void {
+  logout(): void {
+    this.loggedInUserSig.set(null)
+
+    localStorage.clear();
+
+    this.router.navigateByUrl('account/login');
+  }
+
+  setCurrentUser(userInput: LoggedInUser): void {
     localStorage.setItem('loggedIn', JSON.stringify(userInput));
   }
 }

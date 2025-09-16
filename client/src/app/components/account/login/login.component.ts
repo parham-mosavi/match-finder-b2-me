@@ -3,7 +3,7 @@ import { FormBuilder, FormControl, FormsModule, MaxLengthValidator, ReactiveForm
 import { AccountService } from '../../../services/account.service';
 import { Login } from '../../../models/login.model';
 import { Observable } from 'rxjs';
-import { LoggedIn } from '../../../models/logged-in-model';
+import { LoggedInUser } from '../../../models/logged-in-model';
 import { MatInputModule } from "@angular/material/input";
 import { MatBadgeModule } from '@angular/material/badge';
 import { RouterModule } from '@angular/router';
@@ -40,7 +40,7 @@ export class LoginComponent {
       password: this.PasswordCtrl.value
     } //???????????????????????????????????????????????????????????????????????????????????????????
 
-    let loginRes$: Observable<LoggedIn | null> = this.accountService.login(userIn);
+    let loginRes$: Observable<LoggedInUser | null> = this.accountService.login(userIn);
 
     loginRes$.subscribe({
       next: (res) => {
