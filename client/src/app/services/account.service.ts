@@ -46,19 +46,19 @@ export class AccountService {
   }
 
   getAll(): Observable<Member[]> {
-    let response$: Observable<Member[]> = this.http.get<Member[]>('http://localhost:5000/api/member/getall');
+    let response$: Observable<Member[]> = this.http.get<Member[]>(this._baseApiUrl + 'member/getall');
 
     return response$;
   }
 
   getByUserName(userName: string): Observable<Member> {
-    let response$: Observable<Member> = this.http.get<Member>('http://localhost:5000/api/member/get-by-username/' + userName);
+    let response$: Observable<Member> = this.http.get<Member>(this._baseApiUrl + 'member/get-by-username/' + userName);
 
     return response$;
   }
 
   updateById(userId: string, userInput: AppUser): Observable<Member> {
-    let response$: Observable<Member> = this.http.put<Member>('http://localhost:5000/api/user/updatebyid/' + userId, userInput);
+    let response$: Observable<Member> = this.http.put<Member>(this._baseApiUrl + 'user/updatebyid/' + userId, userInput);
 
     return response$;
   }
@@ -72,6 +72,8 @@ export class AccountService {
   }
 
   setCurrentUser(userInput: LoggedInUser): void {
+    this.loggedInUserSig.set(userInput);
+
     localStorage.setItem('loggedIn', JSON.stringify(userInput));
   }
 }
