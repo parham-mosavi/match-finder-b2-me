@@ -1,14 +1,18 @@
 import { Component, inject } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
 import { RouterLink, RouterModule } from '@angular/router';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
 import { AccountService } from '../../services/account.service';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
+import { CommonModule } from '@angular/common';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
 
 @Component({
   selector: 'app-navbar',
   imports: [
-    RouterModule, RouterLink,
+    RouterModule, RouterLink, MatMenuModule,CommonModule,MatDividerModule,MatListModule,
     MatButtonModule, MatToolbarModule, MatIconModule,
 ],
   templateUrl: './navbar.component.html',
