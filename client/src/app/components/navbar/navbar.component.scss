@@ -36,10 +36,10 @@ mat-toolbar {
 
     * {
         // background-color: aqua;
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
-        // align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .profile-info {
@@ -84,6 +84,6 @@ mat-toolbar {
     .logout {
         // background-color: aqua;
         display: flex;
-        padding: 1rem;
+        padding: 0.5px;
     }
 }
