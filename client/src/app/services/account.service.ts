@@ -1,11 +1,13 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable, signal } from '@angular/core';
+import { inject, Injectable, PLATFORM_ID, signal } from '@angular/core';
 import { map, Observable, pipe } from 'rxjs';
 import { Member } from '../models/member.model.js';
 import { AppUser } from '../models/app-user.model.js';
 import { LoggedInUser } from '../models/logged-in-model.js';
 import { Login } from '../models/login.model.js';
 import { Router } from '@angular/router';
+import { isPlatformBrowser } from '@angular/common';
+import { platformBrowser } from '@angular/platform-browser';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +15,7 @@ import { Router } from '@angular/router';
 export class AccountService {
   http = inject(HttpClient);
   router = inject(Router);
+  platformId = inject(PLATFORM_ID);
   loggedInUserSig = signal<LoggedInUser | null>(null);
 
   private readonly _baseApiUrl: string = 'http://localhost:5000/api/'
@@ -66,7 +69,9 @@ export class AccountService {
   logout(): void {
     this.loggedInUserSig.set(null)
 
-    localStorage.clear();
+    if (isPlatformBrowser(this.platformId)){
+      localStorage.clear();
+    }
 
     this.router.navigateByUrl('account/login');
   }
@@ -74,6 +79,8 @@ export class AccountService {
   setCurrentUser(userInput: LoggedInUser): void {
     this.loggedInUserSig.set(userInput);
 
-    localStorage.setItem('loggedIn', JSON.stringify(userInput));
+    if(isPlatformBrowser(this.platformId)) {
+      localStorage.setItem('loggedIn', JSON.stringify(userInput));
+    }
   }
 }

@@ -1,5 +1,6 @@
 namespace api.Controllers;
 
+[Authorize]
 public class UserController(IUserRepository userRepository) : BaseApiController
 {
     [HttpPut("updatebyid/{userId}")]

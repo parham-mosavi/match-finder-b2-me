@@ -1,8 +1,8 @@
 namespace api.Controllers;
 
+[Authorize]
 public class MemberController(IMemberRepository memberRepository) : BaseApiController
 {
-    [Authorize]
     [HttpGet("getall")]
     public async Task<ActionResult<List<MemberDto>>> GetAll(CancellationToken cancellationToken)
     {
