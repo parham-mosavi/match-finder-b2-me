@@ -8,6 +8,7 @@ import { Login } from '../models/login.model.js';
 import { Router } from '@angular/router';
 import { isPlatformBrowser } from '@angular/common';
 import { platformBrowser } from '@angular/platform-browser';
+import { environment } from '../../environments/environment.development.js';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,7 @@ export class AccountService {
   platformId = inject(PLATFORM_ID);
   loggedInUserSig = signal<LoggedInUser | null>(null);
 
-  private readonly _baseApiUrl: string = 'http://localhost:5000/api/'
+  private readonly _baseApiUrl: string = environment.baseApiUrl + 'api/';
 
   register(userInput: AppUser): Observable<LoggedInUser | null> {
     let response$: Observable<LoggedInUser | null> =
@@ -26,6 +27,8 @@ export class AccountService {
         .pipe(map(res => {
           if (res) {
             this.setCurrentUser(res);
+
+            this.router.navigateByUrl('members/member-list')
           }
 
           return null;
@@ -40,28 +43,12 @@ export class AccountService {
         .pipe(map(res => {
           if (res) {
             this.setCurrentUser(res);
+
+            this.router.navigateByUrl('members/member-list')
           }
 
           return null;
         }))
-
-    return response$;
-  }
-
-  getAll(): Observable<Member[]> {
-    let response$: Observable<Member[]> = this.http.get<Member[]>(this._baseApiUrl + 'member/getall');
-
-    return response$;
-  }
-
-  getByUserName(userName: string): Observable<Member> {
-    let response$: Observable<Member> = this.http.get<Member>(this._baseApiUrl + 'member/get-by-username/' + userName);
-
-    return response$;
-  }
-
-  updateById(userId: string, userInput: AppUser): Observable<Member> {
-    let response$: Observable<Member> = this.http.put<Member>(this._baseApiUrl + 'user/updatebyid/' + userId, userInput);
 
     return response$;
   }
