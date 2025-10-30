@@ -39,3 +39,11 @@
 /home/parham/Desktop/match-finder-b2-me/api/obj/Debug/net8.0/api.genruntimeconfig.cache
 /home/parham/Desktop/match-finder-b2-me/api/obj/Debug/net8.0/ref/api.dll
 /home/parham/Desktop/match-finder-b2-me/api/obj/Debug/net8.0/api.sourcelink.json
+/home/parham/Desktop/match-finder-b2-me/api/bin/Debug/net8.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/home/parham/Desktop/match-finder-b2-me/api/bin/Debug/net8.0/Microsoft.IdentityModel.Abstractions.dll
+/home/parham/Desktop/match-finder-b2-me/api/bin/Debug/net8.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/home/parham/Desktop/match-finder-b2-me/api/bin/Debug/net8.0/Microsoft.IdentityModel.Logging.dll
+/home/parham/Desktop/match-finder-b2-me/api/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.dll
+/home/parham/Desktop/match-finder-b2-me/api/bin/Debug/net8.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/home/parham/Desktop/match-finder-b2-me/api/bin/Debug/net8.0/Microsoft.IdentityModel.Tokens.dll
+/home/parham/Desktop/match-finder-b2-me/api/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
