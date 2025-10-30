@@ -13,7 +13,7 @@ public class MemberRepository : IMemberRepository
     #endregion
 
 
-    public async Task<List<AppUser>> GetAllAsync(CancellationToken cancellationToken)
+    public async Task<List<AppUser>?> GetAllAsync(CancellationToken cancellationToken)
     {
         List<AppUser> appUsers = await _collection.Find(new BsonDocument()).ToListAsync(cancellationToken);
 
@@ -28,14 +28,7 @@ public class MemberRepository : IMemberRepository
         if (appUser is null)
             return null;
 
-        MemberDto memberDto = new(
-            Email: appUser.Email,
-            UserName: appUser.UserName,
-            Age: appUser.Age,
-            Gender: appUser.Gender,
-            City: appUser.City,
-            Country: appUser.Country
-        );
+        MemberDto memberDto = _Mappers.ConvertAppUserToMemberDto(appUser);
 
         return memberDto;
     }

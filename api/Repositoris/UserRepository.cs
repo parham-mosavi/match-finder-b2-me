@@ -3,12 +3,15 @@ namespace api.Repositoris;
 public class UserRepository : IUserRepository
 {
     #region dependency injections
-    private readonly IMongoCollection<AppUser> _collection;
     // constructor - dependency injections
-    public UserRepository(IMongoClient client, IMongoDbSettings dbSettings)
+    private readonly IMongoCollection<AppUser> _collection;
+    private readonly ITokenService _tokenService;
+    public UserRepository(IMongoClient client, IMongoDbSettings dbSettings, ITokenService tokenService)
     {
         var dbName = client.GetDatabase(dbSettings.DatabaseName);
         _collection = dbName.GetCollection<AppUser>("users");
+
+        _tokenService = tokenService;
     }
     #endregion
 

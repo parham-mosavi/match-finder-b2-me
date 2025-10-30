@@ -15,14 +15,7 @@ public class MemberController(IMemberRepository memberRepository) : BaseApiContr
 
         foreach (AppUser user in appUser)
         {
-            MemberDto memberDto = new(
-                Email: user.Email,
-                UserName: user.UserName,
-                Age: user.Age,
-                Gender: user.Gender,
-                City: user.City,
-                Country: user.Country
-            );
+            MemberDto memberDto = _Mappers.ConvertAppUserToMemberDto(user);
 
             memberDtos.Add(memberDto);
         }

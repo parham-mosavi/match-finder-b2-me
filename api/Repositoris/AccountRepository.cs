@@ -27,11 +27,7 @@ public class AccountRepository : IAccountRepository
 
         string token = _tokenService.CreateToken(userInput);
 
-        LoggedInDto loggedInDto = new LoggedInDto(
-            UserName: userInput.UserName,
-            Age: userInput.Age,
-            Token: token
-        );
+        LoggedInDto loggedInDto = _Mappers.ConvertAppUserToLoggedInDto(userInput, token);
 
         return loggedInDto;
     }
@@ -48,11 +44,7 @@ public class AccountRepository : IAccountRepository
 
         string token = _tokenService.CreateToken(appUser);
 
-        LoggedInDto loggedInDto = new LoggedInDto(
-            UserName: appUser.UserName,
-            Age: appUser.Age,
-            Token: token
-        );
+        LoggedInDto loggedInDto = _Mappers.ConvertAppUserToLoggedInDto(appUser, token);
 
         return loggedInDto;
     }
