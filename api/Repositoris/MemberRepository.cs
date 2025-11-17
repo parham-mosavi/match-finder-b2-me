@@ -13,9 +13,9 @@ public class MemberRepository : IMemberRepository
     #endregion
 
 
-    public async Task<List<AppUser>?> GetAllAsync(CancellationToken cancellationToken)
+    public async Task<IEnumerable<AppUser>?> GetAllAsync(CancellationToken cancellationToken)
     {
-        List<AppUser> appUsers = await _collection.Find(new BsonDocument()).ToListAsync(cancellationToken);
+        IEnumerable<AppUser> appUsers = await _collection.Find(new BsonDocument()).ToListAsync(cancellationToken);
 
         return appUsers;
     }

@@ -27,14 +27,7 @@ public class UserRepository : IUserRepository
 
         await _collection.UpdateOneAsync(user => user.Id == userId, updateDef, null, cancellationToken);
 
-        MemberDto memberDto = new(
-            Email: appUser.Email,
-            UserName: appUser.UserName,
-            Age: appUser.Age,
-            Gender: appUser.Gender,
-            City: appUser.City,
-            Country: appUser.Country
-        );
+        MemberDto memberDto = _Mappers.ConvertAppUserToMemberDto(appUser);
 
         return memberDto;
     }

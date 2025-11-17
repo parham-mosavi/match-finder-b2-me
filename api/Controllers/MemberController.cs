@@ -4,9 +4,9 @@ namespace api.Controllers;
 public class MemberController(IMemberRepository memberRepository) : BaseApiController
 {
     [HttpGet("getall")]
-    public async Task<ActionResult<List<MemberDto>>> GetAll(CancellationToken cancellationToken)
+    public async Task<ActionResult<IEnumerable<MemberDto>>> GetAll(CancellationToken cancellationToken)
     {
-        List<AppUser>? appUser = await memberRepository.GetAllAsync(cancellationToken);
+        IEnumerable<AppUser>? appUser = await memberRepository.GetAllAsync(cancellationToken);
 
         if (appUser is null)
             return NoContent();
