@@ -53,10 +53,19 @@ export class AccountService {
     return response$;
   }
 
+  authorizeLoggedInUser(): void {
+    this.http.get<LoggedInUser>(this._baseApiUrl + 'account').subscribe({
+      error: (err) => {
+        console.log(err.error);
+        this.logout();
+      }
+    });
+  }
+
   logout(): void {
     this.loggedInUserSig.set(null)
 
-    if (isPlatformBrowser(this.platformId)){
+    if (isPlatformBrowser(this.platformId)) {
       localStorage.clear();
     }
 
@@ -66,7 +75,7 @@ export class AccountService {
   setCurrentUser(userInput: LoggedInUser): void {
     this.loggedInUserSig.set(userInput);
 
-    if(isPlatformBrowser(this.platformId)) {
+    if (isPlatformBrowser(this.platformId)) {
       localStorage.setItem('loggedIn', JSON.stringify(userInput));
     }
   }

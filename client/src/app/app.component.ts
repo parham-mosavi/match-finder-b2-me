@@ -22,10 +22,12 @@ export class AppComponent implements OnInit {
   platformId = inject(PLATFORM_ID);
 
   ngOnInit(): void {
-    if(isPlatformBrowser(this.platformId)) {
+    if (isPlatformBrowser(this.platformId)) {
       let loggedinUserstr: string | null = localStorage.getItem('loggedIn');
-      
+
       if (loggedinUserstr) {
+        this.accountService.authorizeLoggedInUser();
+
         this.accountService.setCurrentUser(JSON.parse(loggedinUserstr))
       }
     }
