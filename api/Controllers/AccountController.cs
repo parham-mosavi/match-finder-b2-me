@@ -1,4 +1,5 @@
 namespace api.Controllers;
+
 public class AccountController(IAccountRepository accountRepository) : BaseApiController
 {
     [HttpPost("register")]
@@ -27,9 +28,14 @@ public class AccountController(IAccountRepository accountRepository) : BaseApiCo
     }
 
     [Authorize]
-    [HttpDelete("delete/{userId}")]
-    public async Task<ActionResult<DeleteResult>> DeleteById(string userId, CancellationToken cancellationToken)
+    [HttpDelete("delete")]
+    public async Task<ActionResult<DeleteResult>> DeleteById(CancellationToken cancellationToken)
     {
+        string? userId = User.GetUserId();
+
+        if (userId is null)
+            return Unauthorized("login again.");
+
         DeleteResult? deleteResult = await accountRepository.DeleteByIdAsync(userId, cancellationToken);
 
         if (deleteResult is null)
