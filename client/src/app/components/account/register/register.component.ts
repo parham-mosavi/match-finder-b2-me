@@ -42,6 +42,7 @@ export class RegisterComponent {
 
   ngOnDestroy(): void {
     this.subscribedRegisterUser?.unsubscribe();
+    console.log('Un sub')
   }
 
   //#region 
@@ -111,7 +112,7 @@ export class RegisterComponent {
 
     let response$: Observable<LoggedInUser | null> = this.accountService.register(userInput);
 
-    response$.subscribe({
+    this.subscribedRegisterUser = response$.subscribe({
       next: (res) => {
         console.log(res);
         this.userResponse = res;
