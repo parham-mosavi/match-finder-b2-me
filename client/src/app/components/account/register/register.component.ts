@@ -7,7 +7,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 
 
@@ -17,7 +18,7 @@ import { Observable } from 'rxjs';
   imports: [
     RouterModule,
     FormsModule, ReactiveFormsModule, MatFormFieldModule,
-    MatButtonModule, MatInputModule
+    MatButtonModule, MatInputModule, MatDatepickerModule
   ],
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss'
@@ -28,12 +29,26 @@ export class RegisterComponent {
 
   userResponse: LoggedInUser | undefined | null;
   error: string | undefined;
+  subscribedRegisterUser: Subscription | undefined;
+
+  minDate = new Date();
+  maxDate = new Date();
+
+  ngOnInit(): void {
+    const currentYear = new Date().getFullYear();
+    this.minDate = new Date(currentYear - 99, 0, 1);
+    this.maxDate = new Date(currentYear - 18, 0, 1);
+  }
+
+  ngOnDestroy(): void {
+    this.subscribedRegisterUser?.unsubscribe();
+  }
 
   //#region 
   registerFg = this.fB.group({
     emailCtrl: ['', [Validators.required, Validators.email]], // formControl
     userNameCtrl: ['', [Validators.required]],
-    ageCtrl: [, [Validators.required, Validators.min(18), Validators.max(70)]],
+    dateOfBirthCtrl: ['', [Validators.required]],
     passwordCtrl: ['', [Validators.minLength(4), Validators.maxLength(8)]],
     confirmPasswordCtrl: ['', [Validators.required]],
     genderCtrl: '',
@@ -49,8 +64,8 @@ export class RegisterComponent {
     return this.registerFg.get('userNameCtrl') as FormControl;
   }
 
-  get AgeCtrl(): FormControl {
-    return this.registerFg.get('ageCtrl') as FormControl;
+  get DateOfBirthCtrl(): FormControl {
+    return this.registerFg.get('dateOfBirthCtrl') as FormControl;
   }
 
   get PasswordCtrl(): FormControl {
@@ -74,11 +89,19 @@ export class RegisterComponent {
   }
   //#endregion
 
+  getDateOnly(dob: string | null): string | undefined {
+    if (!dob) return undefined;
+
+    let theDob: Date = new Date(dob);
+    return new Date(theDob.setMinutes(theDob.getMinutes() - theDob.getTimezoneOffset())).toISOString().slice(0, 10);
+    // gets the first 10 chars from this date YYYY-MM-DDTHH:mm:ss.sssZ the output is YYYY-MM-DD
+  }
+
   register(): void {
     let userInput: AppUser = {
       email: this.EmailCtrl.value,
       userName: this.UserNameCtrl.value,
-      age: this.AgeCtrl.value,
+      dateOfBirth: this.getDateOnly(this.DateOfBirthCtrl.value),
       password: this.PasswordCtrl.value,
       confirmPassword: this.ConfirmPasswordCtrl.value,
       gender: this.GenderCtrl.value,

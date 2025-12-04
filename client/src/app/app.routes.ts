@@ -18,7 +18,7 @@ export const routes: Routes = [{
 { path: 'account/login', component: LoginComponent, canActivate: [authLoggedInGuard] },
 { path: 'footer', component: FooterComponent },
 { path: 'navbar', component: NavbarComponent },
-{ path: 'members/member-list', component: MemberListComponent, canDeactivate: [authGuard] },
+{ path: 'members/member-list', component: MemberListComponent, canActivate: [authGuard] },
 { path: 'members/member-card', component: MemberCardComponent },
 { path: '**', component: NotFoundComponent }
 ];

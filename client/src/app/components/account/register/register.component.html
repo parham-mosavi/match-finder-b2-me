@@ -1,5 +1,5 @@
-    <div>
-        <form>
+<div>
+    <form>
         <p class="heder">Register</p>
         <mat-form-field appearance="outline">
             <mat-label>Email</mat-label>
@@ -12,11 +12,6 @@
         </mat-form-field>
 
         <mat-form-field appearance="outline">
-            <mat-label>Age</mat-label>
-            <input type="number" [formControl]="AgeCtrl" matInput>
-        </mat-form-field>
-
-        <mat-form-field appearance="outline">
             <mat-label>Password</mat-label>
             <input type="password" [formControl]="PasswordCtrl" matInput>
         </mat-form-field>
@@ -24,6 +19,14 @@
         <mat-form-field appearance="outline">
             <mat-label>Confirm Password</mat-label>
             <input type="password" [formControl]="ConfirmPasswordCtrl" matInput>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Date of Birth</mat-label>
+            <input matInput [min]="minDate" [max]="maxDate" [formControl]="DateOfBirthCtrl" [matDatepicker]="datePicker"
+                placeholder="Enter your date of birth">
+            <mat-datepicker-toggle matIconSuffix [for]="datePicker"></mat-datepicker-toggle>
+            <mat-datepicker #datePicker touchUi disabled="false"></mat-datepicker>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
@@ -41,7 +44,8 @@
             <input type="text" [formControl]="CountryCtrl" matInput>
         </mat-form-field>
 
-        <button routerLink='/members/member-list' (click)="register()" mat-raised-button [disabled]="registerFg.invalid">Register</button>
+        <button (click)="register()" mat-raised-button
+            [disabled]="registerFg.invalid">Register</button>
         <a class="router-login" routerLink="/account/login" href="">I have Account</a>
     </form>
 

@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { MemberService } from '../../../services/member.service';
 
 @Component({
   selector: 'app-member-list',
@@ -13,7 +14,8 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './member-list.component.scss'
 })
 export class MemberListComponent implements OnInit{
-  accountservics = inject(AccountService)
+  accountservics = inject(AccountService);
+  memberservics = inject(MemberService);
   members: Member[] | undefined;
   
   ngOnInit(): void {
@@ -21,7 +23,7 @@ export class MemberListComponent implements OnInit{
   }
 
   getAll(): void {
-    let allMembers: Observable<Member[]> = this.accountservics.getAll();
+    let allMembers: Observable<Member[]> = this.memberservics.getAll();
 
     allMembers.subscribe({
       next: (res) => {

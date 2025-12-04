@@ -23,7 +23,7 @@ export class AccountService {
 
   register(userInput: AppUser): Observable<LoggedInUser | null> {
     let response$: Observable<LoggedInUser | null> =
-      this.http.post<LoggedInUser>(this._baseApiUrl + 'account/register', userInput)
+      this.http.post<LoggedInUser>('http://localhost:5000/api/account/register', userInput)
         .pipe(map(res => {
           if (res) {
             this.setCurrentUser(res);
@@ -80,3 +80,5 @@ export class AccountService {
     }
   }
 }
+
+// this._baseApiUrl + 'account/register'
