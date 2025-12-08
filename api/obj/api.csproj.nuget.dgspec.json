@@ -45,6 +45,14 @@
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.30.0, )"
+            },
+            "SkiaSharp": {
+              "target": "Package",
+              "version": "[3.119.1, )"
+            },
+            "SkiaSharp.NativeAssets.Linux": {
+              "target": "Package",
+              "version": "[3.119.1, )"
             }
           },
           "imports": [
