@@ -9,5 +9,6 @@ public record AppUser(
   DateOnly DateOfBirth, // int Age,
     string Gender,
     string City,
-    string Country
+    string Country,
+    List<Photo> Photo
 );
