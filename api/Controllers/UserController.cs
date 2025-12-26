@@ -1,3 +1,5 @@
+using api.Extensions.Validations;
+
 namespace api.Controllers;
 
 [Authorize]
@@ -20,7 +22,9 @@ public class UserController(IUserRepository userRepository) : BaseApiController
     }
 
     [HttpPost("add-photo")]
-    public async Task<ActionResult<Photo>> AddPhoto(IFormFile file, CancellationToken cancellationToken)
+    public async Task<ActionResult<Photo>> AddPhoto(
+        [AllowedFileExtensions, FileSize(250_000, 4_000_000)]
+        IFormFile file, CancellationToken cancellationToken)
     {
         if (file is null) return BadRequest("No file selected with this request");
 

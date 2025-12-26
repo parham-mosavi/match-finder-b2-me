@@ -1,4 +1,3 @@
-using api.DTOs;
 
 namespace api.Repositoris;
 
@@ -71,7 +70,7 @@ public class UserRepository : IUserRepository
 
             return result.ModifiedCount == 1 ? photo : null;
         }
-        
+
         return null;
     }
 }
