@@ -1,5 +1,3 @@
-using Image_Processing_WwwRoot.Interfaces;
-using SkiaSharp;
 
 namespace Image_Processing_WwwRoot.Services;
 

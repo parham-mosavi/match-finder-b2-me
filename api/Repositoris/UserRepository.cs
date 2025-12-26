@@ -6,12 +6,15 @@ public class UserRepository : IUserRepository
     // constructor - dependency injections
     private readonly IMongoCollection<AppUser> _collection;
     private readonly ITokenService _tokenService;
-    public UserRepository(IMongoClient client, IMongoDbSettings dbSettings, ITokenService tokenService)
+    private readonly IPhotoService _photoService;
+    public UserRepository(IMongoClient client, IMongoDbSettings dbSettings, ITokenService tokenService, IPhotoService photoService)
     {
         var dbName = client.GetDatabase(dbSettings.DatabaseName);
         _collection = dbName.GetCollection<AppUser>("users");
 
         _tokenService = tokenService;
+        _photoService = photoService;
+
     }
     #endregion
 
@@ -30,5 +33,36 @@ public class UserRepository : IUserRepository
         MemberDto memberDto = _Mappers.ConvertAppUserToMemberDto(appUser);
 
         return memberDto;
+    }
+
+    public async Task<Photo?> UploadPhotoAsync(IFormFile file, string userId, CancellationToken cancellationToken)
+    {
+        AppUser? appUser = await _collection.Find(doc => doc.Id == userId).FirstOrDefaultAsync(cancellationToken);
+
+        if (appUser is null)
+            return null;
+
+        string[]? imageUrls = await _photoService.AddPhotoToDiskAsync(file, userId);
+
+        if (imageUrls is not null)
+        {
+            Photo photo = new Photo(
+            Url_165: imageUrls[0],
+            Url_256: imageUrls[1],
+            Url_enlarged: imageUrls[2],
+            IsMain: true
+            );
+
+            appUser.Photos.Add(photo);
+
+
+            UpdateDefinition<AppUser> updatedUser = Builders<AppUser>.Update
+                .Set(doc => doc.Photos, appUser.Photos);
+
+            UpdateResult result = await _collection.UpdateOneAsync(doc => doc.Id == userId, updatedUser, null, cancellationToken);
+
+            return result.ModifiedCount == 1 ? photo : null;
+        }
+        return null;
     }
 }

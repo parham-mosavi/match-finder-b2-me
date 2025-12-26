@@ -16,3 +16,7 @@ global using System.Text;
 global using Microsoft.IdentityModel.Tokens;
 global using api.Services;
 global using Microsoft.AspNetCore.Authorization;
+global using Image_Processing_WwwRoot.Helpers;
+global using Image_Processing_WwwRoot.Interfaces;
+global using SkiaSharp;
+global using System.Runtime.InteropServices;

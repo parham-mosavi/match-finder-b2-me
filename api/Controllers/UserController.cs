@@ -18,4 +18,19 @@ public class UserController(IUserRepository userRepository) : BaseApiController
 
         return memberDto;
     }
+
+    [HttpPost("add-photo")]
+    public async Task<ActionResult<Photo>> AddPhoto(IFormFile file, CancellationToken cancellationToken)
+    {
+        if (file is null) return BadRequest("No file selected with this request");
+
+        string? userId = User.GetUserId();
+
+        if (userId is null)
+            return Unauthorized("You are not logged in. please login again");
+
+        Photo? photo = await userRepository.UploadPhotoAsync(file, userId, cancellationToken);
+
+        return photo is null ? BadRequest("Add photo failed. See logger") : photo;
+    }
 }

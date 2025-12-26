@@ -1,7 +1,4 @@
-using api.Interfaces;
-using Image_Processing_WwwRoot.Helpers;
-using Image_Processing_WwwRoot.Interfaces;
-
+    
 namespace api.Services;
 
 public class PhotoService(

@@ -1,3 +1,5 @@
+using Image_Processing_WwwRoot.Services;
+
 namespace api.Extensions;
 
 public static class RepositoryServiceExtensions
@@ -8,6 +10,8 @@ public static class RepositoryServiceExtensions
         services.AddScoped<IMemberRepository, MemberRepository>();
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddScoped<ITokenService, TokenService>();
+        services.AddScoped<IPhotoService, PhotoService>();
+        services.AddScoped<IPhotoModifySaveService, PhotoModifySaveService>();
 
         return services;
 
