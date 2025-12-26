@@ -18,6 +18,13 @@ public class UserRepository : IUserRepository
     }
     #endregion
 
+    public async Task<AppUser?> GetByIdAsync(string userId, CancellationToken cancellationToken)
+    {
+        AppUser? appUser = await _collection.Find(doc => doc.Id == userId).FirstOrDefaultAsync(cancellationToken);
+
+        return appUser is null ? null : appUser;
+    }
+
     public async Task<MemberDto?> UpdateByIdAsync(string userId, AppUser userInput, CancellationToken cancellationToken)
     {
         AppUser? appUser = await _collection.Find(User => User.Id == userId).FirstOrDefaultAsync(cancellationToken);
@@ -37,7 +44,7 @@ public class UserRepository : IUserRepository
 
     public async Task<Photo?> UploadPhotoAsync(IFormFile file, string userId, CancellationToken cancellationToken)
     {
-        AppUser? appUser = await _collection.Find(doc => doc.Id == userId).FirstOrDefaultAsync(cancellationToken);
+        AppUser? appUser = await GetByIdAsync(userId, cancellationToken);
 
         if (appUser is null)
             return null;
