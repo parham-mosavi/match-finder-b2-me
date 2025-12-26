@@ -1,3 +1,5 @@
+using api.DTOs;
+
 namespace api.Repositoris;
 
 public class UserRepository : IUserRepository
@@ -44,6 +46,8 @@ public class UserRepository : IUserRepository
 
     public async Task<Photo?> UploadPhotoAsync(IFormFile file, string userId, CancellationToken cancellationToken)
     {
+        Photo photo;
+
         AppUser? appUser = await GetByIdAsync(userId, cancellationToken);
 
         if (appUser is null)
@@ -53,12 +57,9 @@ public class UserRepository : IUserRepository
 
         if (imageUrls is not null)
         {
-            Photo photo = new Photo(
-            Url_165: imageUrls[0],
-            Url_256: imageUrls[1],
-            Url_enlarged: imageUrls[2],
-            IsMain: true
-            );
+            photo = appUser.Photos.Count == 0
+              ? _Mappers.ConvertPhotoUrlsToPhoto(imageUrls, true)
+              : _Mappers.ConvertPhotoUrlsToPhoto(imageUrls, false);
 
             appUser.Photos.Add(photo);
 
@@ -70,6 +71,7 @@ public class UserRepository : IUserRepository
 
             return result.ModifiedCount == 1 ? photo : null;
         }
+        
         return null;
     }
 }
