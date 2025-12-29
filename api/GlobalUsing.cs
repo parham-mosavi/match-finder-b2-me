@@ -9,6 +9,7 @@ global using api.Models;
 global using api.DTOs;
 global using api.Repositoris;
 global using api.Extensions;
+global using api.Extensions.Validations;
 global using api.Controllers.Helpers;
 global using System.IdentityModel.Tokens.Jwt;
 global using System.Security.Claims;

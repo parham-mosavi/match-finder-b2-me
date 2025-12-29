@@ -8,14 +8,15 @@ public class UserRepository : IUserRepository
     private readonly IMongoCollection<AppUser> _collection;
     private readonly ITokenService _tokenService;
     private readonly IPhotoService _photoService;
-    public UserRepository(IMongoClient client, IMongoDbSettings dbSettings, ITokenService tokenService, IPhotoService photoService)
+    private readonly ILogger<UserRepository> _logger;
+    public UserRepository(IMongoClient client, IMongoDbSettings dbSettings, ITokenService tokenService, IPhotoService photoService, ILogger<UserRepository> logger)
     {
         var dbName = client.GetDatabase(dbSettings.DatabaseName);
         _collection = dbName.GetCollection<AppUser>("users");
 
         _tokenService = tokenService;
         _photoService = photoService;
-
+        _logger = logger;
     }
     #endregion
 
@@ -95,5 +96,33 @@ public class UserRepository : IUserRepository
 
         return await _collection.UpdateOneAsync(filterNew, updateNew, null, cancellationToken);
         #endregion
+    }
+
+    public async Task<UpdateResult?> DeletePhotoAsync(string userId, string urlIn, CancellationToken cancellationToken)
+    {
+        if (string.IsNullOrEmpty(urlIn)) return null;
+
+        Photo photo = await _collection.AsQueryable()
+        .Where(appUser => appUser.Id == userId)
+        .SelectMany(appUser => appUser.Photos)
+        .Where(photos => photos.Url_165 == urlIn)
+        .FirstOrDefaultAsync(cancellationToken);
+
+        if (photo is null) return null;
+
+        if (photo.IsMain) return null;
+
+        bool isDeleteSuccess = await _photoService.DeletePhotoFromDiskAsync(photo);
+        if (!isDeleteSuccess)
+        {
+            _logger.LogError("Delete Photo form disk failed");
+
+            return null;
+        }
+
+        UpdateDefinition<AppUser> updateDef = Builders<AppUser>.Update
+            .PullFilter(appUser => appUser.Photos, photo => photo.Url_165 == urlIn);
+
+        return await _collection.UpdateOneAsync(appUser => appUser.Id == userId, updateDef, null, cancellationToken);
     }
 }

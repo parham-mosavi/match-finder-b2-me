@@ -7,4 +7,6 @@ public interface IUserRepository
     public Task<Photo?> UploadPhotoAsync(IFormFile file, string userId, CancellationToken cancellationToken);
 
     public Task<UpdateResult?> SetMainPhotoAsync(string userId, string photoUrlIn, CancellationToken cancellationToken);
+
+    public Task<UpdateResult?> DeletePhotoAsync(string userId, string urlIn, CancellationToken cancellationToken);
 }
