@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "Hash": "SGAR07SZq4q/k2fq+tXpiEmMdLQS5I/JaHarBao+drU=",
+  "Source": "api",
+  "BasePath": "_content/api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "api/wwwroot",
+      "Source": "api",
+      "ContentRoot": "/home/parham/Desktop/match-finder-b2-me/backend/api/wwwroot/",
+      "BasePath": "_content/api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/home/parham/Desktop/match-finder-b2-me/backend/api/wwwroot/storage/photos/695169183d1a5ae9f62f1c7b/resize-pixel-square/165x165/e5a7d51e6794440c8d815a6d1458241f_Screenshot from 2025-11-24 20-09-05.webp",
+      "SourceId": "api",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/parham/Desktop/match-finder-b2-me/backend/api/wwwroot/",
+      "BasePath": "_content/api",
+      "RelativePath": "storage/photos/695169183d1a5ae9f62f1c7b/resize-pixel-square/165x165/e5a7d51e6794440c8d815a6d1458241f_Screenshot from 2025-11-24 20-09-05.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/storage/photos/695169183d1a5ae9f62f1c7b/resize-pixel-square/165x165/e5a7d51e6794440c8d815a6d1458241f_Screenshot from 2025-11-24 20-09-05.webp"
+    },
+    {
+      "Identity": "/home/parham/Desktop/match-finder-b2-me/backend/api/wwwroot/storage/photos/695169183d1a5ae9f62f1c7b/resize-pixel-square/256x256/d21a4f5ba9b2414487ce039668fbf932_Screenshot from 2025-11-24 20-09-05.webp",
+      "SourceId": "api",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/parham/Desktop/match-finder-b2-me/backend/api/wwwroot/",
+      "BasePath": "_content/api",
+      "RelativePath": "storage/photos/695169183d1a5ae9f62f1c7b/resize-pixel-square/256x256/d21a4f5ba9b2414487ce039668fbf932_Screenshot from 2025-11-24 20-09-05.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/storage/photos/695169183d1a5ae9f62f1c7b/resize-pixel-square/256x256/d21a4f5ba9b2414487ce039668fbf932_Screenshot from 2025-11-24 20-09-05.webp"
+    },
+    {
+      "Identity": "/home/parham/Desktop/match-finder-b2-me/backend/api/wwwroot/storage/photos/695169183d1a5ae9f62f1c7b/resize-scale/5d70ebbb82cc4faeba6f8ad7aaa0b9cd_Screenshot from 2025-11-24 20-09-05.webp",
+      "SourceId": "api",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/parham/Desktop/match-finder-b2-me/backend/api/wwwroot/",
+      "BasePath": "_content/api",
+      "RelativePath": "storage/photos/695169183d1a5ae9f62f1c7b/resize-scale/5d70ebbb82cc4faeba6f8ad7aaa0b9cd_Screenshot from 2025-11-24 20-09-05.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/storage/photos/695169183d1a5ae9f62f1c7b/resize-scale/5d70ebbb82cc4faeba6f8ad7aaa0b9cd_Screenshot from 2025-11-24 20-09-05.webp"
+    }
+  ]
+}

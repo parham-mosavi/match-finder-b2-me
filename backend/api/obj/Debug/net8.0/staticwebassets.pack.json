@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "/home/parham/Desktop/match-finder-b2-me/backend/api/wwwroot/storage/photos/695169183d1a5ae9f62f1c7b/resize-pixel-square/165x165/e5a7d51e6794440c8d815a6d1458241f_Screenshot from 2025-11-24 20-09-05.webp",
+      "PackagePath": "staticwebassets/storage/photos/695169183d1a5ae9f62f1c7b/resize-pixel-square/165x165/e5a7d51e6794440c8d815a6d1458241f_Screenshot from 2025-11-24 20-09-05.webp"
+    },
+    {
+      "Id": "/home/parham/Desktop/match-finder-b2-me/backend/api/wwwroot/storage/photos/695169183d1a5ae9f62f1c7b/resize-pixel-square/256x256/d21a4f5ba9b2414487ce039668fbf932_Screenshot from 2025-11-24 20-09-05.webp",
+      "PackagePath": "staticwebassets/storage/photos/695169183d1a5ae9f62f1c7b/resize-pixel-square/256x256/d21a4f5ba9b2414487ce039668fbf932_Screenshot from 2025-11-24 20-09-05.webp"
+    },
+    {
+      "Id": "/home/parham/Desktop/match-finder-b2-me/backend/api/wwwroot/storage/photos/695169183d1a5ae9f62f1c7b/resize-scale/5d70ebbb82cc4faeba6f8ad7aaa0b9cd_Screenshot from 2025-11-24 20-09-05.webp",
+      "PackagePath": "staticwebassets/storage/photos/695169183d1a5ae9f62f1c7b/resize-scale/5d70ebbb82cc4faeba6f8ad7aaa0b9cd_Screenshot from 2025-11-24 20-09-05.webp"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.api.props",
+      "PackagePath": "build\\api.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.api.props",
+      "PackagePath": "buildMultiTargeting\\api.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.api.props",
+      "PackagePath": "buildTransitive\\api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
