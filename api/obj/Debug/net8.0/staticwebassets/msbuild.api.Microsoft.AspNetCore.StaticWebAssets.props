@@ -1,11 +1,11 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\694eaf54631442ff8d2fdfc2\resize-pixel-square\165x165\08648f6bcc9e4e1b9011e12243a6cd68_Screenshot from 2025-12-25 19-30-11.webp))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\695169183d1a5ae9f62f1c7b\resize-pixel-square\165x165\e5a7d51e6794440c8d815a6d1458241f_Screenshot from 2025-11-24 20-09-05.webp))">
       <SourceType>Package</SourceType>
       <SourceId>api</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/api</BasePath>
-      <RelativePath>storage/photos/694eaf54631442ff8d2fdfc2/resize-pixel-square/165x165/08648f6bcc9e4e1b9011e12243a6cd68_Screenshot from 2025-12-25 19-30-11.webp</RelativePath>
+      <RelativePath>storage/photos/695169183d1a5ae9f62f1c7b/resize-pixel-square/165x165/e5a7d51e6794440c8d815a6d1458241f_Screenshot from 2025-11-24 20-09-05.webp</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -14,14 +14,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\694eaf54631442ff8d2fdfc2\resize-pixel-square\165x165\08648f6bcc9e4e1b9011e12243a6cd68_Screenshot from 2025-12-25 19-30-11.webp))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\695169183d1a5ae9f62f1c7b\resize-pixel-square\165x165\e5a7d51e6794440c8d815a6d1458241f_Screenshot from 2025-11-24 20-09-05.webp))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\694eaf54631442ff8d2fdfc2\resize-pixel-square\165x165\96c5c30b913c4538b8bc117fd8e478d5_Screenshot from 2025-12-25 19-30-11.webp))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\695169183d1a5ae9f62f1c7b\resize-pixel-square\256x256\d21a4f5ba9b2414487ce039668fbf932_Screenshot from 2025-11-24 20-09-05.webp))">
       <SourceType>Package</SourceType>
       <SourceId>api</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/api</BasePath>
-      <RelativePath>storage/photos/694eaf54631442ff8d2fdfc2/resize-pixel-square/165x165/96c5c30b913c4538b8bc117fd8e478d5_Screenshot from 2025-12-25 19-30-11.webp</RelativePath>
+      <RelativePath>storage/photos/695169183d1a5ae9f62f1c7b/resize-pixel-square/256x256/d21a4f5ba9b2414487ce039668fbf932_Screenshot from 2025-11-24 20-09-05.webp</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -30,14 +30,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\694eaf54631442ff8d2fdfc2\resize-pixel-square\165x165\96c5c30b913c4538b8bc117fd8e478d5_Screenshot from 2025-12-25 19-30-11.webp))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\695169183d1a5ae9f62f1c7b\resize-pixel-square\256x256\d21a4f5ba9b2414487ce039668fbf932_Screenshot from 2025-11-24 20-09-05.webp))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\694eaf54631442ff8d2fdfc2\resize-pixel-square\165x165\a0b133e6e8ea431bb34b62223e6a4a2e_Screenshot from 2025-12-25 19-30-11.webp))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\695169183d1a5ae9f62f1c7b\resize-scale\5d70ebbb82cc4faeba6f8ad7aaa0b9cd_Screenshot from 2025-11-24 20-09-05.webp))">
       <SourceType>Package</SourceType>
       <SourceId>api</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/api</BasePath>
-      <RelativePath>storage/photos/694eaf54631442ff8d2fdfc2/resize-pixel-square/165x165/a0b133e6e8ea431bb34b62223e6a4a2e_Screenshot from 2025-12-25 19-30-11.webp</RelativePath>
+      <RelativePath>storage/photos/695169183d1a5ae9f62f1c7b/resize-scale/5d70ebbb82cc4faeba6f8ad7aaa0b9cd_Screenshot from 2025-11-24 20-09-05.webp</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -46,103 +46,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\694eaf54631442ff8d2fdfc2\resize-pixel-square\165x165\a0b133e6e8ea431bb34b62223e6a4a2e_Screenshot from 2025-12-25 19-30-11.webp))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\694eaf54631442ff8d2fdfc2\resize-pixel-square\256x256\2b54231839d5449a87c0c8231ae13e22_Screenshot from 2025-12-25 19-30-11.webp))">
-      <SourceType>Package</SourceType>
-      <SourceId>api</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/api</BasePath>
-      <RelativePath>storage/photos/694eaf54631442ff8d2fdfc2/resize-pixel-square/256x256/2b54231839d5449a87c0c8231ae13e22_Screenshot from 2025-12-25 19-30-11.webp</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\694eaf54631442ff8d2fdfc2\resize-pixel-square\256x256\2b54231839d5449a87c0c8231ae13e22_Screenshot from 2025-12-25 19-30-11.webp))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\694eaf54631442ff8d2fdfc2\resize-pixel-square\256x256\5c03bcd78ec846318e2a69b5e8db10ac_Screenshot from 2025-12-25 19-30-11.webp))">
-      <SourceType>Package</SourceType>
-      <SourceId>api</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/api</BasePath>
-      <RelativePath>storage/photos/694eaf54631442ff8d2fdfc2/resize-pixel-square/256x256/5c03bcd78ec846318e2a69b5e8db10ac_Screenshot from 2025-12-25 19-30-11.webp</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\694eaf54631442ff8d2fdfc2\resize-pixel-square\256x256\5c03bcd78ec846318e2a69b5e8db10ac_Screenshot from 2025-12-25 19-30-11.webp))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\694eaf54631442ff8d2fdfc2\resize-pixel-square\256x256\b63cdfcea127464e8c1db5ae75a09464_Screenshot from 2025-12-25 19-30-11.webp))">
-      <SourceType>Package</SourceType>
-      <SourceId>api</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/api</BasePath>
-      <RelativePath>storage/photos/694eaf54631442ff8d2fdfc2/resize-pixel-square/256x256/b63cdfcea127464e8c1db5ae75a09464_Screenshot from 2025-12-25 19-30-11.webp</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\694eaf54631442ff8d2fdfc2\resize-pixel-square\256x256\b63cdfcea127464e8c1db5ae75a09464_Screenshot from 2025-12-25 19-30-11.webp))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\694eaf54631442ff8d2fdfc2\resize-scale\55666cfcaddc4ba283394906306e485d_Screenshot from 2025-12-25 19-30-11.webp))">
-      <SourceType>Package</SourceType>
-      <SourceId>api</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/api</BasePath>
-      <RelativePath>storage/photos/694eaf54631442ff8d2fdfc2/resize-scale/55666cfcaddc4ba283394906306e485d_Screenshot from 2025-12-25 19-30-11.webp</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\694eaf54631442ff8d2fdfc2\resize-scale\55666cfcaddc4ba283394906306e485d_Screenshot from 2025-12-25 19-30-11.webp))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\694eaf54631442ff8d2fdfc2\resize-scale\ca5f7e3ee65f4ef9aceb26d7d2773c96_Screenshot from 2025-12-25 19-30-11.webp))">
-      <SourceType>Package</SourceType>
-      <SourceId>api</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/api</BasePath>
-      <RelativePath>storage/photos/694eaf54631442ff8d2fdfc2/resize-scale/ca5f7e3ee65f4ef9aceb26d7d2773c96_Screenshot from 2025-12-25 19-30-11.webp</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\694eaf54631442ff8d2fdfc2\resize-scale\ca5f7e3ee65f4ef9aceb26d7d2773c96_Screenshot from 2025-12-25 19-30-11.webp))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\694eaf54631442ff8d2fdfc2\resize-scale\dd8a69e090b443278e84db2e6e9dbd75_Screenshot from 2025-12-25 19-30-11.webp))">
-      <SourceType>Package</SourceType>
-      <SourceId>api</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/api</BasePath>
-      <RelativePath>storage/photos/694eaf54631442ff8d2fdfc2/resize-scale/dd8a69e090b443278e84db2e6e9dbd75_Screenshot from 2025-12-25 19-30-11.webp</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\694eaf54631442ff8d2fdfc2\resize-scale\dd8a69e090b443278e84db2e6e9dbd75_Screenshot from 2025-12-25 19-30-11.webp))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\695169183d1a5ae9f62f1c7b\resize-scale\5d70ebbb82cc4faeba6f8ad7aaa0b9cd_Screenshot from 2025-11-24 20-09-05.webp))</OriginalItemSpec>
     </StaticWebAsset>
   </ItemGroup>
 </Project>

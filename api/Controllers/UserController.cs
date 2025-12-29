@@ -63,7 +63,7 @@ public class UserController(IUserRepository userRepository) : BaseApiController
         UpdateResult? result = await userRepository.DeletePhotoAsync(userId, photoUrlIn, cancellationToken);
 
         return result is null || !result.IsModifiedCountAvailable
-            ? BadRequest("Photo deletion failed. Try again in a few moments. If the issue persists contact the admin.")
+            ? BadRequest("Photo deletion failed. Try again in a few moments. If the issue persists contact the admin. this photo is your profile ")
             : Ok("Photo deleted successfully.");
     }
 }
