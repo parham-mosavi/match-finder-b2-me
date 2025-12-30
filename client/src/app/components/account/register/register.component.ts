@@ -9,6 +9,8 @@ import { MatInputModule } from '@angular/material/input';
 import { FormBuilder, FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Observable, Subscription } from 'rxjs';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatRadioButton } from '@angular/material/radio';
+import { RegisterUser } from '../../../models/register-user.model';
 
 
 
@@ -16,7 +18,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
   selector: 'app-register',
   standalone: true,
   imports: [
-    RouterModule,
+    RouterModule, MatRadioButton,
     FormsModule, ReactiveFormsModule, MatFormFieldModule,
     MatButtonModule, MatInputModule, MatDatepickerModule
   ],
@@ -30,6 +32,7 @@ export class RegisterComponent {
   userResponse: LoggedInUser | undefined | null;
   error: string | undefined;
   subscribedRegisterUser: Subscription | undefined;
+  passwordsNotMatch: boolean | undefined;
 
   minDate = new Date();
   maxDate = new Date();
@@ -47,14 +50,12 @@ export class RegisterComponent {
 
   //#region 
   registerFg = this.fB.group({
-    emailCtrl: ['', [Validators.required, Validators.email]], // formControl
-    userNameCtrl: ['', [Validators.required]],
-    dateOfBirthCtrl: ['', [Validators.required]],
-    passwordCtrl: ['', [Validators.minLength(4), Validators.maxLength(8)]],
-    confirmPasswordCtrl: ['', [Validators.required]],
-    genderCtrl: '',
-    cityCtrl: '',
-    countryCtrl: ''
+    genderCtrl: ['female', [Validators.required]],
+    emailCtrl: ['', [Validators.required, Validators.maxLength(50), Validators.pattern(/^([\w\.\-]+)@([\w\-]+)((\.(\w){2,5})+)$/)]],
+    userNameCtrl: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(30)]],
+    passwordCtrl: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(20)]],
+    confirmPasswordCtrl: ['', [Validators.required, Validators.minLength(1), Validators.maxLength(20)]],
+    dateOfBirthCtrl: ['', [Validators.required]]
   });
 
   get EmailCtrl(): FormControl {
@@ -81,13 +82,6 @@ export class RegisterComponent {
     return this.registerFg.get('genderCtrl') as FormControl;
   }
 
-  get CityCtrl(): FormControl {
-    return this.registerFg.get('cityCtrl') as FormControl;
-  }
-
-  get CountryCtrl(): FormControl {
-    return this.registerFg.get('countryCtrl') as FormControl;
-  }
   //#endregion
 
   getDateOnly(dob: string | null): string | undefined {
@@ -99,31 +93,51 @@ export class RegisterComponent {
   }
 
   register(): void {
-    let userInput: AppUser = {
-      email: this.EmailCtrl.value,
-      userName: this.UserNameCtrl.value,
-      dateOfBirth: this.getDateOnly(this.DateOfBirthCtrl.value),
-      password: this.PasswordCtrl.value,
-      confirmPassword: this.ConfirmPasswordCtrl.value,
-      gender: this.GenderCtrl.value,
-      city: this.CityCtrl.value,
-      country: this.CountryCtrl.value
+    const dob: string | undefined = this.getDateOnly(this.DateOfBirthCtrl.value)
+
+    if (this.PasswordCtrl.value === this.ConfirmPasswordCtrl.value) {
+      let userInput: RegisterUser = {
+        email: this.EmailCtrl.value,
+        userName: this.UserNameCtrl.value,
+        dateOfBirth: this.getDateOnly(this.DateOfBirthCtrl.value),
+        password: this.PasswordCtrl.value,
+        confirmPassword: this.ConfirmPasswordCtrl.value,
+        gender: this.GenderCtrl.value
+      }
+
+      this.subscribedRegisterUser = this.accountService.register(userInput).subscribe({
+        next: (res) => console.log(res),
+      })
     }
 
-    let response$: Observable<LoggedInUser | null> = this.accountService.register(userInput);
-
-    this.subscribedRegisterUser = response$.subscribe({
-      next: (res) => {
-        console.log(res);
-        this.userResponse = res;
-      },
-      error: (err) => {
-        console.log(err.error);
-        this.error = err.error;
-      }
-    });
+    else {
+      this.passwordsNotMatch === true;
+    }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+// let response$: Observable<LoggedInUser | null> = this.accountService.register(userInput);
+
+// this.subscribedRegisterUser = response$.subscribe({
+//   next: (res) => {
+//     console.log(res);
+//     this.userResponse = res;
+//   },
+//   error: (err) => {
+//     console.log(err.error);
+//     this.error = err.error;
+//   }
+// });
 
 //     response$.subscribe({
 //       next: (res) => {

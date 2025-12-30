@@ -13,7 +13,7 @@ public static class _Mappers
            Password: registerDto.Password,
            ConfirmPassword: registerDto.ConfirmPassword,
            DateOfBirth: registerDto.DateOfBirth,
-           Gender: string.Empty, // ""
+           Gender: registerDto.Gender, // ""
            Introduction: string.Empty,
            LookingFor: string.Empty,
            Interests: string.Empty,

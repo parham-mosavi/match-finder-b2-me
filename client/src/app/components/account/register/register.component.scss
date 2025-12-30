@@ -1,31 +1,30 @@
-div {
-    // background: palegoldenrod;
+form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    margin-top: 1rem;
 
-    .heder {
-        font-size: xx-large;
-        margin: 1rem;
-    }
-
-    form {
-        // background: gray;
-        // background-color: aquamarine;
+    .content {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        gap: 6px;
+        gap: 1rem;
+
+        width: 25rem;
+
+        border: 1px solid rgb(172, 172, 172);
+        border-radius: 1rem;
+
         padding: 1rem;
-        margin: 1rem;
-        border: solid 4px black;
-        border-radius: 8px;
+
+        // background-color: aqua;
     }
 
-    .router-login {
-        // text-decoration-line: none;
-        margin: 1rem;
+    mat-form-field {
+        min-width: 20rem;
+    }
+
+    p {
+        color: red;
     }
 }
