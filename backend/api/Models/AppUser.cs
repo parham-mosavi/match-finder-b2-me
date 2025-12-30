@@ -10,6 +10,9 @@ public record AppUser(
     string ConfirmPassword,
     DateOnly DateOfBirth, // int Age,
     string Gender,
+    string Introduction,
+    string LookingFor,
+    string Interests,
     string City,
     string Country,
     List<Photo> Photos
