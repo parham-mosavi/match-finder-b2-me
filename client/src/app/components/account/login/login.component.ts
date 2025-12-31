@@ -19,7 +19,7 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class LoginComponent {
   accountService = inject(AccountService);
-  fB = inject(FormBuilder);
+ fB = inject(FormBuilder);
 
   subscribedlogin: undefined | Subscription;
 
@@ -30,7 +30,7 @@ export class LoginComponent {
 
   loginFg = this.fB.group({
     userNameCtrl: ['', [Validators.required]],
-    passwordCtrl: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(8)]]
+    passwordCtrl: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(20)]]
   });
 
   get UserNameCtrl(): FormControl {

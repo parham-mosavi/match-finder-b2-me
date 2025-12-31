@@ -1,14 +1,30 @@
-<div class="item-1">
-    <form>
-        <p class="heder" >Login</p>
+<form>
+    <div class="item-1">
+        <p class="heder">Login</p>
         <mat-form-field>
             <mat-label>User Name</mat-label>
             <input type="text" [formControl]="UserNameCtrl" matInput>
+            @if (UserNameCtrl.hasError('required')) {
+            <mat-error>This field is required</mat-error>
+            }
         </mat-form-field>
 
-        <mat-form-field>
+        <mat-form-field appearance="outline">
             <mat-label>Password</mat-label>
             <input type="password" [formControl]="PasswordCtrl" matInput>
+            @if (PasswordCtrl.hasError('required')) {
+            <mat-error>This field is required.</mat-error>
+            }
+            @else if (PasswordCtrl.errors && PasswordCtrl.hasError('minlength')) {
+            <mat-error>
+                It's too short. Min: {{PasswordCtrl.errors['minlength'].requiredLength}} characters.
+                You've typed {{PasswordCtrl.errors['minlength'].actualLength}}.
+            </mat-error>
+            }
+            @else if(PasswordCtrl.errors && PasswordCtrl.hasError('maxlength')) {
+            <mat-error>It's too long. Max: {{PasswordCtrl.errors['maxlength'].requiredLength}}
+                characters.</mat-error>
+            }
         </mat-form-field>
 
         <button (click)="login()" mat-raised-button [disabled]="loginFg.invalid">
@@ -17,5 +33,5 @@
 
         <a class="router-register" routerLink="/account/register" href="">Creat new account</a>
 
-    </form>
-</div>
+    </div>
+</form>
