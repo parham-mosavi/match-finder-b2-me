@@ -11,6 +11,9 @@ import { Observable, Subscription } from 'rxjs';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatRadioButton } from '@angular/material/radio';
 import { RegisterUser } from '../../../models/register-user.model';
+import { MatRadioModule } from '@angular/material/radio';
+import { HttpErrorResponse } from '@angular/common/http';
+
 
 
 
@@ -18,7 +21,7 @@ import { RegisterUser } from '../../../models/register-user.model';
   selector: 'app-register',
   standalone: true,
   imports: [
-    RouterModule, MatRadioButton,
+    RouterModule, MatRadioModule,
     FormsModule, ReactiveFormsModule, MatFormFieldModule,
     MatButtonModule, MatInputModule, MatDatepickerModule
   ],
