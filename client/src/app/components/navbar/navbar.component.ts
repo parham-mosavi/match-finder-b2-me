@@ -8,20 +8,23 @@ import { MatMenuModule } from '@angular/material/menu';
 import { CommonModule } from '@angular/common';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
+import { environment } from '../../../environments/environment.development';
 
 @Component({
   selector: 'app-navbar',
   imports: [
-    RouterModule, RouterLink, MatMenuModule,CommonModule,MatDividerModule,MatListModule,
+    RouterModule, RouterLink, MatMenuModule, CommonModule, MatDividerModule, MatListModule,
     MatButtonModule, MatToolbarModule, MatIconModule,
-],
+  ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
+
 })
 export class NavbarComponent {
   accountServis = inject(AccountService);
+  apiUrl = environment.baseApiUrl;
 
-  logout() {
+  logout(): void {
     this.accountServis.logout();
   }
 }

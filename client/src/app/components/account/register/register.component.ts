@@ -15,8 +15,6 @@ import { MatRadioModule } from '@angular/material/radio';
 import { HttpErrorResponse } from '@angular/common/http';
 
 
-
-
 @Component({
   selector: 'app-register',
   standalone: true,

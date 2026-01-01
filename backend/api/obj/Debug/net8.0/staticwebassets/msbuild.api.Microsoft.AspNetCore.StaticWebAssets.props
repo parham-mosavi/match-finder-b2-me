@@ -48,5 +48,53 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\695169183d1a5ae9f62f1c7b\resize-scale\5d70ebbb82cc4faeba6f8ad7aaa0b9cd_Screenshot from 2025-11-24 20-09-05.webp))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\6955fbc4134050e5e1633934\resize-pixel-square\165x165\c515416fdd544599a8cbeeadee218e11_Screenshot from 2025-12-25 19-30-11.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/api</BasePath>
+      <RelativePath>storage/photos/6955fbc4134050e5e1633934/resize-pixel-square/165x165/c515416fdd544599a8cbeeadee218e11_Screenshot from 2025-12-25 19-30-11.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\6955fbc4134050e5e1633934\resize-pixel-square\165x165\c515416fdd544599a8cbeeadee218e11_Screenshot from 2025-12-25 19-30-11.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\6955fbc4134050e5e1633934\resize-pixel-square\256x256\69ec413dbb65442ca8cebbaa698837ee_Screenshot from 2025-12-25 19-30-11.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/api</BasePath>
+      <RelativePath>storage/photos/6955fbc4134050e5e1633934/resize-pixel-square/256x256/69ec413dbb65442ca8cebbaa698837ee_Screenshot from 2025-12-25 19-30-11.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\6955fbc4134050e5e1633934\resize-pixel-square\256x256\69ec413dbb65442ca8cebbaa698837ee_Screenshot from 2025-12-25 19-30-11.webp))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\6955fbc4134050e5e1633934\resize-scale\fe6dd7901b744f58875b381ba92bbbeb_Screenshot from 2025-12-25 19-30-11.webp))">
+      <SourceType>Package</SourceType>
+      <SourceId>api</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/api</BasePath>
+      <RelativePath>storage/photos/6955fbc4134050e5e1633934/resize-scale/fe6dd7901b744f58875b381ba92bbbeb_Screenshot from 2025-12-25 19-30-11.webp</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\storage\photos\6955fbc4134050e5e1633934\resize-scale\fe6dd7901b744f58875b381ba92bbbeb_Screenshot from 2025-12-25 19-30-11.webp))</OriginalItemSpec>
+    </StaticWebAsset>
   </ItemGroup>
 </Project>
