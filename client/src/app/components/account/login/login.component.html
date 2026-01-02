@@ -2,10 +2,13 @@
     <div class="item-1">
         <p class="heder">Login</p>
         <mat-form-field>
-            <mat-label>User Name</mat-label>
-            <input type="text" [formControl]="UserNameCtrl" matInput>
-            @if (UserNameCtrl.hasError('required')) {
+            <mat-label>Email</mat-label>
+            <input type="email" [formControl]="EmailCtrl" matInput>
+            @if (EmailCtrl.hasError('required')) {
             <mat-error>This field is required</mat-error>
+            }
+            @else if (EmailCtrl.hasError('pattern')) {
+                <mat-error>Enter a valid email.</mat-error>
             }
         </mat-form-field>
 

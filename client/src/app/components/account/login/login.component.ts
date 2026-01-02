@@ -29,12 +29,12 @@ export class LoginComponent {
   }
 
   loginFg = this.fB.group({
-    userNameCtrl: ['', [Validators.required]],
+    emailCtrl: ['', [Validators.required, Validators.maxLength(50), Validators.pattern(/^([\w\.\-]+)@([\w\-]+)((\.(\w){2,5})+)$/)]],
     passwordCtrl: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(20)]]
   });
 
-  get UserNameCtrl(): FormControl {
-    return this.loginFg.get('userNameCtrl') as FormControl;
+  get EmailCtrl(): FormControl {
+    return this.loginFg.get('emailCtrl') as FormControl;
   }
 
   get PasswordCtrl(): FormControl {
@@ -43,7 +43,7 @@ export class LoginComponent {
 
   login(): void {
     let userIn: Login = {
-      userName: this.UserNameCtrl.value,
+      email: this.EmailCtrl.value,
       password: this.PasswordCtrl.value
     } //???????????????????????????????????????????????????????????????????????????????????????????
 
