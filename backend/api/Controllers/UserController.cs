@@ -1,7 +1,4 @@
 
-using api.Extensions;
-using api.Extensions.Validations;
-
 namespace api.Controllers;
 
 [Authorize]
@@ -12,7 +9,7 @@ public class UserController(IUserRepository userRepository) : BaseApiController
     {
         string? userId = User.GetUserId();
 
-        if (userId is null)
+        if (userId is null) 
             return Unauthorized("login again");
 
         UpdateResult? result = await userRepository.UpdateByIdAsync(userId, userInput, cancellationToken);

@@ -17,4 +17,8 @@ global using Microsoft.AspNetCore.Authorization;
 global using Image_Processing_WwwRoot.Helpers;
 global using Image_Processing_WwwRoot.Interfaces;
 global using System.Runtime.InteropServices;
+global using api.Extensions;
+global using api.Extensions.Validations;
+
+
 // global using MongoDB.Driver.Linq;

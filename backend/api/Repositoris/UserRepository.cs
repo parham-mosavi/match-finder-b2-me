@@ -34,7 +34,7 @@ public class UserRepository : IUserRepository
         UpdateDefinition<AppUser> updateDef = Builders<AppUser>.Update
                 .Set(appUser => appUser.Introduction, userInput.Introduction.Trim())
                 .Set(appUser => appUser.LookingFor, userInput.LookingFor.Trim())
-               .Set(appUser => appUser.Interests, userInput.Interests)
+                .Set(appUser => appUser.Interests, userInput.Interests)
                 .Set(appUser => appUser.City, userInput.City.Trim().ToLower())
                 .Set(appUser => appUser.Country, userInput.Country.Trim().ToLower());
 
