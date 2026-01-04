@@ -1,0 +1,13 @@
+/home/parham/Desktop/match-finder-b2-me/backend/Image_Processing_WwwRoot/bin/Debug/net10.0/Image_Processing_WwwRoot.deps.json
+/home/parham/Desktop/match-finder-b2-me/backend/Image_Processing_WwwRoot/bin/Debug/net10.0/Image_Processing_WwwRoot.dll
+/home/parham/Desktop/match-finder-b2-me/backend/Image_Processing_WwwRoot/bin/Debug/net10.0/Image_Processing_WwwRoot.pdb
+/home/parham/Desktop/match-finder-b2-me/backend/Image_Processing_WwwRoot/obj/Debug/net10.0/Image_Processing_WwwRoot.csproj.AssemblyReference.cache
+/home/parham/Desktop/match-finder-b2-me/backend/Image_Processing_WwwRoot/obj/Debug/net10.0/Image_Processing_WwwRoot.GeneratedMSBuildEditorConfig.editorconfig
+/home/parham/Desktop/match-finder-b2-me/backend/Image_Processing_WwwRoot/obj/Debug/net10.0/Image_Processing_WwwRoot.AssemblyInfoInputs.cache
+/home/parham/Desktop/match-finder-b2-me/backend/Image_Processing_WwwRoot/obj/Debug/net10.0/Image_Processing_WwwRoot.AssemblyInfo.cs
+/home/parham/Desktop/match-finder-b2-me/backend/Image_Processing_WwwRoot/obj/Debug/net10.0/Image_Processing_WwwRoot.csproj.CoreCompileInputs.cache
+/home/parham/Desktop/match-finder-b2-me/backend/Image_Processing_WwwRoot/obj/Debug/net10.0/Image_Processing_WwwRoot.sourcelink.json
+/home/parham/Desktop/match-finder-b2-me/backend/Image_Processing_WwwRoot/obj/Debug/net10.0/Image_Processing_WwwRoot.dll
+/home/parham/Desktop/match-finder-b2-me/backend/Image_Processing_WwwRoot/obj/Debug/net10.0/refint/Image_Processing_WwwRoot.dll
+/home/parham/Desktop/match-finder-b2-me/backend/Image_Processing_WwwRoot/obj/Debug/net10.0/Image_Processing_WwwRoot.pdb
+/home/parham/Desktop/match-finder-b2-me/backend/Image_Processing_WwwRoot/obj/Debug/net10.0/ref/Image_Processing_WwwRoot.dll

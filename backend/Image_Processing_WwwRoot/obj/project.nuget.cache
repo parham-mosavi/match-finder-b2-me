@@ -1,17 +1,27 @@
 {
   "version": 2,
-  "dgSpecHash": "9Mob04iYQyxOZmIThLHdJKYH8qB/f0d/J0SwKyn50KqcWcLPaTgeQb8CWS8e6/ZHCYYsNVeR2F6i4X8LLhD0eQ==",
+  "dgSpecHash": "cx0L/CeJpzw=",
   "success": true,
   "projectFilePath": "/home/parham/Desktop/match-finder-b2-me/backend/Image_Processing_WwwRoot/Image_Processing_WwwRoot.csproj",
   "expectedPackageFiles": [
     "/home/parham/.nuget/packages/microsoft.aspnetcore.http.abstractions/2.3.0/microsoft.aspnetcore.http.abstractions.2.3.0.nupkg.sha512",
-    "/home/parham/.nuget/packages/microsoft.aspnetcore.http.features/2.3.0/microsoft.aspnetcore.http.features.2.3.0.nupkg.sha512",
-    "/home/parham/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "/home/parham/.nuget/packages/skiasharp/3.119.1/skiasharp.3.119.1.nupkg.sha512",
     "/home/parham/.nuget/packages/skiasharp.nativeassets.linux/3.119.1/skiasharp.nativeassets.linux.3.119.1.nupkg.sha512",
     "/home/parham/.nuget/packages/skiasharp.nativeassets.macos/3.119.1/skiasharp.nativeassets.macos.3.119.1.nupkg.sha512",
-    "/home/parham/.nuget/packages/skiasharp.nativeassets.win32/3.119.1/skiasharp.nativeassets.win32.3.119.1.nupkg.sha512",
-    "/home/parham/.nuget/packages/system.text.encodings.web/8.0.0/system.text.encodings.web.8.0.0.nupkg.sha512"
+    "/home/parham/.nuget/packages/skiasharp.nativeassets.win32/3.119.1/skiasharp.nativeassets.win32.3.119.1.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1510",
+      "level": "Warning",
+      "message": "PackageReference Microsoft.AspNetCore.Http.Abstractions will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.",
+      "projectPath": "/home/parham/Desktop/match-finder-b2-me/backend/Image_Processing_WwwRoot/Image_Processing_WwwRoot.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/parham/Desktop/match-finder-b2-me/backend/Image_Processing_WwwRoot/Image_Processing_WwwRoot.csproj",
+      "libraryId": "Microsoft.AspNetCore.Http.Abstractions",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
 }
