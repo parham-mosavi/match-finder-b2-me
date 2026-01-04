@@ -95,7 +95,7 @@ export class RegisterComponent {
 
   register(): void {
     const dob: string | undefined = this.getDateOnly(this.DateOfBirthCtrl.value)
-
+    
     if (this.PasswordCtrl.value === this.ConfirmPasswordCtrl.value) {
       let userInput: RegisterUser = {
         email: this.EmailCtrl.value,
@@ -105,14 +105,13 @@ export class RegisterComponent {
         confirmPassword: this.ConfirmPasswordCtrl.value,
         gender: this.GenderCtrl.value
       }
-
+      
       this.subscribedRegisterUser = this.accountService.register(userInput).subscribe({
         next: (res) => console.log(res),
       })
     }
-
     else {
-      this.passwordsNotMatch === true;
+      this.passwordsNotMatch = true;
     }
   }
 }
