@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "cx0L/CeJpzw=",
+  "dgSpecHash": "RWefsl8kr2s=",
   "success": true,
   "projectFilePath": "/home/parham/Desktop/match-finder-b2-me/backend/Image_Processing_WwwRoot/Image_Processing_WwwRoot.csproj",
   "expectedPackageFiles": [
     "/home/parham/.nuget/packages/microsoft.aspnetcore.http.abstractions/2.3.0/microsoft.aspnetcore.http.abstractions.2.3.0.nupkg.sha512",
-    "/home/parham/.nuget/packages/skiasharp/3.119.1/skiasharp.3.119.1.nupkg.sha512",
-    "/home/parham/.nuget/packages/skiasharp.nativeassets.linux/3.119.1/skiasharp.nativeassets.linux.3.119.1.nupkg.sha512",
-    "/home/parham/.nuget/packages/skiasharp.nativeassets.macos/3.119.1/skiasharp.nativeassets.macos.3.119.1.nupkg.sha512",
-    "/home/parham/.nuget/packages/skiasharp.nativeassets.win32/3.119.1/skiasharp.nativeassets.win32.3.119.1.nupkg.sha512"
+    "/home/parham/.nuget/packages/skiasharp/3.119.2-preview.1/skiasharp.3.119.2-preview.1.nupkg.sha512",
+    "/home/parham/.nuget/packages/skiasharp.nativeassets.linux/3.119.2-preview.1/skiasharp.nativeassets.linux.3.119.2-preview.1.nupkg.sha512",
+    "/home/parham/.nuget/packages/skiasharp.nativeassets.macos/3.119.2-preview.1/skiasharp.nativeassets.macos.3.119.2-preview.1.nupkg.sha512",
+    "/home/parham/.nuget/packages/skiasharp.nativeassets.win32/3.119.2-preview.1/skiasharp.nativeassets.win32.3.119.2-preview.1.nupkg.sha512"
   ],
   "logs": [
     {

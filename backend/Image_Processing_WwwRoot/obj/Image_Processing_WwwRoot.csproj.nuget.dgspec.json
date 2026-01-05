@@ -51,11 +51,11 @@
             },
             "SkiaSharp": {
               "target": "Package",
-              "version": "[3.119.1, )"
+              "version": "[3.119.2-preview.1, )"
             },
             "SkiaSharp.NativeAssets.Linux": {
               "target": "Package",
-              "version": "[3.119.1, )"
+              "version": "[3.119.2-preview.1, )"
             }
           },
           "imports": [

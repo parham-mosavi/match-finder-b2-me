@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1oG9ScoCbmU=",
+  "dgSpecHash": "irHBjcVQ800=",
   "success": true,
   "projectFilePath": "/home/parham/Desktop/match-finder-b2-me/backend/api/api.csproj",
   "expectedPackageFiles": [
@@ -15,10 +15,10 @@
     "/home/parham/.nuget/packages/mongodb.bson/3.5.2/mongodb.bson.3.5.2.nupkg.sha512",
     "/home/parham/.nuget/packages/mongodb.driver/3.5.2/mongodb.driver.3.5.2.nupkg.sha512",
     "/home/parham/.nuget/packages/sharpcompress/0.30.1/sharpcompress.0.30.1.nupkg.sha512",
-    "/home/parham/.nuget/packages/skiasharp/3.119.1/skiasharp.3.119.1.nupkg.sha512",
-    "/home/parham/.nuget/packages/skiasharp.nativeassets.linux/3.119.1/skiasharp.nativeassets.linux.3.119.1.nupkg.sha512",
-    "/home/parham/.nuget/packages/skiasharp.nativeassets.macos/3.119.1/skiasharp.nativeassets.macos.3.119.1.nupkg.sha512",
-    "/home/parham/.nuget/packages/skiasharp.nativeassets.win32/3.119.1/skiasharp.nativeassets.win32.3.119.1.nupkg.sha512",
+    "/home/parham/.nuget/packages/skiasharp/3.119.2-preview.1/skiasharp.3.119.2-preview.1.nupkg.sha512",
+    "/home/parham/.nuget/packages/skiasharp.nativeassets.linux/3.119.2-preview.1/skiasharp.nativeassets.linux.3.119.2-preview.1.nupkg.sha512",
+    "/home/parham/.nuget/packages/skiasharp.nativeassets.macos/3.119.2-preview.1/skiasharp.nativeassets.macos.3.119.2-preview.1.nupkg.sha512",
+    "/home/parham/.nuget/packages/skiasharp.nativeassets.win32/3.119.2-preview.1/skiasharp.nativeassets.win32.3.119.2-preview.1.nupkg.sha512",
     "/home/parham/.nuget/packages/snappier/1.0.0/snappier.1.0.0.nupkg.sha512",
     "/home/parham/.nuget/packages/system.identitymodel.tokens.jwt/8.0.1/system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512",
     "/home/parham/.nuget/packages/zstdsharp.port/0.7.3/zstdsharp.port.0.7.3.nupkg.sha512"

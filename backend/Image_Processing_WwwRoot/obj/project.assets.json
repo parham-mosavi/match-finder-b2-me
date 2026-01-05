@@ -15,11 +15,11 @@
           }
         }
       },
-      "SkiaSharp/3.119.1": {
+      "SkiaSharp/3.119.2-preview.1": {
         "type": "package",
         "dependencies": {
-          "SkiaSharp.NativeAssets.Win32": "3.119.1",
-          "SkiaSharp.NativeAssets.macOS": "3.119.1"
+          "SkiaSharp.NativeAssets.Win32": "3.119.2-preview.1",
+          "SkiaSharp.NativeAssets.macOS": "3.119.2-preview.1"
         },
         "compile": {
           "ref/net8.0/SkiaSharp.dll": {}
@@ -30,7 +30,7 @@
           }
         }
       },
-      "SkiaSharp.NativeAssets.Linux/3.119.1": {
+      "SkiaSharp.NativeAssets.Linux/3.119.2-preview.1": {
         "type": "package",
         "compile": {
           "lib/net8.0/_._": {}
@@ -85,7 +85,7 @@
           }
         }
       },
-      "SkiaSharp.NativeAssets.macOS/3.119.1": {
+      "SkiaSharp.NativeAssets.macOS/3.119.2-preview.1": {
         "type": "package",
         "compile": {
           "lib/net8.0/_._": {}
@@ -100,7 +100,7 @@
           }
         }
       },
-      "SkiaSharp.NativeAssets.Win32/3.119.1": {
+      "SkiaSharp.NativeAssets.Win32/3.119.2-preview.1": {
         "type": "package",
         "compile": {
           "lib/net8.0/_._": {}
@@ -113,11 +113,23 @@
             "assetType": "native",
             "rid": "win-arm64"
           },
+          "runtimes/win-arm64/native/libSkiaSharp.pdb": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
           "runtimes/win-x64/native/libSkiaSharp.dll": {
             "assetType": "native",
             "rid": "win-x64"
           },
+          "runtimes/win-x64/native/libSkiaSharp.pdb": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
           "runtimes/win-x86/native/libSkiaSharp.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/libSkiaSharp.pdb": {
             "assetType": "native",
             "rid": "win-x86"
           }
@@ -139,10 +151,10 @@
         "microsoft.aspnetcore.http.abstractions.nuspec"
       ]
     },
-    "SkiaSharp/3.119.1": {
-      "sha512": "+Ru1BTSZQne3Vp+vbSb50Ke3Nlc3ZnItxx4+751J9WZ8YzLKAV/n+9DAo4zFTyeCI//ueT63c+VybmTTpYBEiw==",
+    "SkiaSharp/3.119.2-preview.1": {
+      "sha512": "gW+LU71pFNOM/o1mP4gzAnOgiX6Ffy7GFDAjcnbJMmAes6ogy00xKNwJ7bjxL2TSyBPXiH6CXjRe+gjmZVeqcA==",
       "type": "package",
-      "path": "skiasharp/3.119.1",
+      "path": "skiasharp/3.119.2-preview.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -187,14 +199,14 @@
         "ref/net8.0/SkiaSharp.dll",
         "ref/netstandard2.0/SkiaSharp.dll",
         "ref/netstandard2.1/SkiaSharp.dll",
-        "skiasharp.3.119.1.nupkg.sha512",
+        "skiasharp.3.119.2-preview.1.nupkg.sha512",
         "skiasharp.nuspec"
       ]
     },
-    "SkiaSharp.NativeAssets.Linux/3.119.1": {
-      "sha512": "9YNoc4SeKvQhrwiqwT4ezkNfMywPdPSK+UFvo/CaoXqLixcnYOTsQKm5BF9mc4+q3vKgDtEgMt0d1ygZhJTEHg==",
+    "SkiaSharp.NativeAssets.Linux/3.119.2-preview.1": {
+      "sha512": "bsxLxfpE5VFExgCp1rfl4y3i4z36Mku03wP1Hino9jpi2hJftbv3l/zLfLK8G6UGo1/vL18PDDPUgi8iIjV02Q==",
       "type": "package",
-      "path": "skiasharp.nativeassets.linux/3.119.1",
+      "path": "skiasharp.nativeassets.linux/3.119.2-preview.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -220,14 +232,14 @@
         "runtimes/linux-riscv64/native/libSkiaSharp.so",
         "runtimes/linux-x64/native/libSkiaSharp.so",
         "runtimes/linux-x86/native/libSkiaSharp.so",
-        "skiasharp.nativeassets.linux.3.119.1.nupkg.sha512",
+        "skiasharp.nativeassets.linux.3.119.2-preview.1.nupkg.sha512",
         "skiasharp.nativeassets.linux.nuspec"
       ]
     },
-    "SkiaSharp.NativeAssets.macOS/3.119.1": {
-      "sha512": "6hR3BdLhApjDxR1bFrJ7/lMydPfI01s3K+3WjIXFUlfC0MFCFCwRzv+JtzIkW9bDXs7XUVQS+6EVf0uzCasnGQ==",
+    "SkiaSharp.NativeAssets.macOS/3.119.2-preview.1": {
+      "sha512": "LcX8G40OiOZjPYukVvPQ9JhIPDQWOwVO6KejfAb9GTzYpDOVi5MNT2cbHG9oGkSGGGDQWmBtoQkPJFAWIxR3Eg==",
       "type": "package",
-      "path": "skiasharp.nativeassets.macos/3.119.1",
+      "path": "skiasharp.nativeassets.macos/3.119.2-preview.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -245,14 +257,14 @@
         "lib/netstandard2.0/_._",
         "lib/netstandard2.1/_._",
         "runtimes/osx/native/libSkiaSharp.dylib",
-        "skiasharp.nativeassets.macos.3.119.1.nupkg.sha512",
+        "skiasharp.nativeassets.macos.3.119.2-preview.1.nupkg.sha512",
         "skiasharp.nativeassets.macos.nuspec"
       ]
     },
-    "SkiaSharp.NativeAssets.Win32/3.119.1": {
-      "sha512": "8C4GSXVJqSr0y3Tyyv5jz6MJSTVUyYkMjeKrzK+VyZPGLo89MNoUEclVuYahzOCDdtbfXrd2HtxXfDuvoSXrUw==",
+    "SkiaSharp.NativeAssets.Win32/3.119.2-preview.1": {
+      "sha512": "Mhybti0rGmZtk9whLkir5oRmhVhLNfwT7shnCaTX7yuO0PTIMD80fhmlcrB/PAP51xPUiV05a8DRCpp02LEGpw==",
       "type": "package",
-      "path": "skiasharp.nativeassets.win32/3.119.1",
+      "path": "skiasharp.nativeassets.win32/3.119.2-preview.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -270,9 +282,12 @@
         "lib/netstandard2.0/_._",
         "lib/netstandard2.1/_._",
         "runtimes/win-arm64/native/libSkiaSharp.dll",
+        "runtimes/win-arm64/native/libSkiaSharp.pdb",
         "runtimes/win-x64/native/libSkiaSharp.dll",
+        "runtimes/win-x64/native/libSkiaSharp.pdb",
         "runtimes/win-x86/native/libSkiaSharp.dll",
-        "skiasharp.nativeassets.win32.3.119.1.nupkg.sha512",
+        "runtimes/win-x86/native/libSkiaSharp.pdb",
+        "skiasharp.nativeassets.win32.3.119.2-preview.1.nupkg.sha512",
         "skiasharp.nativeassets.win32.nuspec"
       ]
     }
@@ -280,8 +295,8 @@
   "projectFileDependencyGroups": {
     "net10.0": [
       "Microsoft.AspNetCore.Http.Abstractions >= 2.3.0",
-      "SkiaSharp >= 3.119.1",
-      "SkiaSharp.NativeAssets.Linux >= 3.119.1"
+      "SkiaSharp >= 3.119.2-preview.1",
+      "SkiaSharp.NativeAssets.Linux >= 3.119.2-preview.1"
     ]
   },
   "packageFolders": {
@@ -334,11 +349,11 @@
           },
           "SkiaSharp": {
             "target": "Package",
-            "version": "[3.119.1, )"
+            "version": "[3.119.2-preview.1, )"
           },
           "SkiaSharp.NativeAssets.Linux": {
             "target": "Package",
-            "version": "[3.119.1, )"
+            "version": "[3.119.2-preview.1, )"
           }
         },
         "imports": [
