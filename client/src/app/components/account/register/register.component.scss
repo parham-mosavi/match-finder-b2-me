@@ -9,15 +9,22 @@ form {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
-
+        
         width: 25rem;
-
+        
         border: 1px solid rgb(172, 172, 172);
         border-radius: 1rem;
-
+        
         padding: 1rem;
-
-        // background-color: aqua;
+        
+        .Im-a{
+            padding: 5px;
+        }
+        
+        mat-radio-button{
+            flex-direction: row-reverse;
+            direction: rtl;
+        }
     }
 
     mat-form-field {
