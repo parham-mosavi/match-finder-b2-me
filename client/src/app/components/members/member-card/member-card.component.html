@@ -1,1 +1,68 @@
-<p>member-card works!</p>
+<div class="container">
+    @if (member) {
+        <div class="members-container">
+            @if (member.gender == 'male') {
+                <mat-card class="card">
+                    <div class="card-image-wrapper">
+                        <img src="images/100.jpg" alt="{{member.userName}}">
+                        <ul class="user-icon">
+                            <li>
+                                <button mat-mini-fab>
+                                    <mat-icon color="primary">person_add</mat-icon>
+                            </button>
+                        </li>
+                        <li>
+                            <button mat-mini-fab>
+                                <mat-icon color="warn">favorite</mat-icon>
+                            </button>
+                        </li>
+                        <li>
+                            <button mat-mini-fab>
+                                <mat-icon color="primary">chat</mat-icon>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <mat-card-header>
+                    <div class="title">
+                        <mat-icon>man</mat-icon>
+                    </div>
+                    <mat-card-subtitle>{{member.userName}}</mat-card-subtitle>
+                    <!-- <mat-card-subtitle> Age :{{member.age}}</mat-card-subtitle> -->
+                </mat-card-header>
+            </mat-card>
+        }
+        @else{
+            <mat-card class="card">
+                <div class="card-image-wrapper">
+                    <img src="images/102.jpeg" alt="{{member.userName}}">
+                    <ul class="user-icon">
+                        <li>
+                            <button mat-mini-fab>
+                                <mat-icon color="primary">person_add</mat-icon>
+                            </button>
+                        </li>
+                        <li>
+                            <button mat-mini-fab>
+                                <mat-icon color="warn">favorite</mat-icon>
+                            </button>
+                        </li>
+                        <li>
+                            <button mat-mini-fab>
+                                <mat-icon color="primary">chat</mat-icon>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <mat-card-header>
+                    <div class="title">
+                        <mat-icon>woman</mat-icon>
+                    </div>
+                    <mat-card-subtitle>{{member.userName}}</mat-card-subtitle>
+                    <!-- <mat-card-subtitle> Age :{{member.age}}</mat-card-subtitle> -->
+                </mat-card-header>
+            </mat-card>
+        }
+    </div>
+    }
+</div>

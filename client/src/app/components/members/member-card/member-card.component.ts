@@ -14,5 +14,5 @@ import { Member } from '../../../models/member.model';
   styleUrl: './member-card.component.scss'
 })
 export class MemberCardComponent {
-
+@Input('member') member: Member | undefined;
 }
