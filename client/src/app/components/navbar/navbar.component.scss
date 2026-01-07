@@ -22,7 +22,7 @@ mat-toolbar {
 
             img {
                 padding-top: 6px;
-                height: 100%; 
+                height: 100%;
                 width: 100%;
                 border-radius: 50%;
             }
@@ -32,49 +32,43 @@ mat-toolbar {
 
 ::ng-deep .mat-menu {
     .user-info {
-        // background-color: black;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: rem;
-        // text-emphasis-color: red;
-        // text-decoration-color: brown;
-    }
+        gap: 10px;
+        padding: 2rem;
 
-    * {
-        // background-color: aqua;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+        * {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .profile-info {
-        // background-color: brown;
-        border-radius: 50%;
-        box-shadow: 3px 3px 3px rgb(144, 144, 144);
-
-        img {
-            height: 6rem;
-            width: 6rem;
+        .profile-info {
             border-radius: 50%;
+            box-shadow: 3px 3px 3px rgb(144, 144, 144);
+
+
+            img {
+                height: 8rem;
+                width: 8rem;
+                border-radius: 50%;
+
+            }
         }
     }
 
     mat-list {
         padding: 0;
         margin: 0;
-        // background-color: cadetblue;
 
         mat-list-item {
-            // background-color: chartreuse;
             padding: 0;
         }
 
         .menu-items {
-            // background-color: burlywood;
             display: flex;
-            flex-direction: column;
             align-items: center;
             gap: 5px;
             line-height: 47px;
@@ -82,15 +76,15 @@ mat-toolbar {
             padding-right: 5rem;
 
             &:hover {
-                background-color: rgb(174, 23, 174);
+                background-color: rgb(255, 176, 255);
                 cursor: pointer;
             }
         }
     }
 
     .logout {
-        // background-color: aqua;
         display: flex;
-        padding: 0.5px;
+        justify-content: center;
+        padding: 1rem;
     }
 }

@@ -41,7 +41,7 @@ public class UserRepository : IUserRepository
         UpdateResult? result = await _collection.UpdateOneAsync
             (user => user.Id == userId, updateDef, null, cancellationToken);
 
-        if (!result.IsModifiedCountAvailable) return null;
+            if (!result.IsModifiedCountAvailable) return null;
 
         return result;
     }

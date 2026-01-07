@@ -9,16 +9,17 @@ import { MemberListComponent } from './components/members/member-list/member-lis
 import { MemberCardComponent } from './components/members/member-card/member-card.component';
 import { authGuard } from './guards/auth.guard';
 import { authLoggedInGuard } from './guards/auth-logged-in.guard';
+import { UserEditComponent } from './components/user/user-edit/user-edit.component';
 
-export const routes: Routes = [{
-    path: '', component: HomeComponent
-},
-// { path: 'home', component: HomeComponent },
-{ path: 'account/register', component: RegisterComponent, canActivate: [authLoggedInGuard] },
-{ path: 'account/login', component: LoginComponent, canActivate: [authLoggedInGuard] },
-{ path: 'footer', component: FooterComponent },
-{ path: 'navbar', component: NavbarComponent },
-{ path: 'members/member-list', component: MemberListComponent, canActivate: [authGuard] },
-{ path: 'members/member-card', component: MemberCardComponent },
-{ path: '**', component: NotFoundComponent }
+export const routes: Routes = [
+    { path: '', component: HomeComponent },
+    // { path: 'home', component: HomeComponent },
+    { path: 'account/register', component: RegisterComponent, canActivate: [authLoggedInGuard] },
+    { path: 'account/login', component: LoginComponent, canActivate: [authLoggedInGuard] },
+    { path: 'footer', component: FooterComponent },
+    { path: 'navbar', component: NavbarComponent },
+    { path: 'members/member-list', component: MemberListComponent, canActivate: [authGuard] },
+    { path: 'members/member-card', component: MemberCardComponent },
+    { path: 'user-edit', component: UserEditComponent, canActivate:[authGuard]},
+    { path: '**', component: NotFoundComponent }
 ];
